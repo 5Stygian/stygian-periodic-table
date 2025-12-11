@@ -1,5 +1,6 @@
 import Element from './elements/element';
 import EmptyCell from './elements/emptyCell';
+import HydrogenHeliumDist from './elements/hhedist';
 
 export default function PeriodicTable() {
   return (
