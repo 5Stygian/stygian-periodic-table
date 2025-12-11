@@ -1,6 +1,6 @@
 import * as c from './components/index';
 
-export default function Home() {
+export default function Main() {
   return (
     <main className="min-h-screen w-full">
       <c.Sidebar>

@@ -12,5 +12,5 @@ export default function Greet(): ReactElement {
         });
     }, []);
 
-    return <span>{greet}</span>;
+    return <span className='text-7xl'>{greet}</span>;
 }
