@@ -1,4 +1,4 @@
-import { HasChildren } from '../../utils/types';
+import { HasChildren } from '../../util/types';
 
 export default function PeriodicTable({ children }: HasChildren) {
   return (
