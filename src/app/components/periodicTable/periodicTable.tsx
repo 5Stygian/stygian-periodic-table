@@ -1,15 +1,9 @@
-import Element from './elements/element';
-import EmptyCell from './elements/emptyCell';
-import HydrogenHeliumDist from './elements/hhedist';
+import Period1 from "./periods/period1";
 
 export default function PeriodicTable() {
   return (
-    <div className="grid grid-cols-18 grid-rows-7 gap-2">
-      <EmptyCell />
-      <Element symbol='H' name='Hydrogen' atomicNumber={1} color="gray-400" />
-      <HydrogenHeliumDist />
-      <Element symbol='He' name='Helium' atomicNumber={2} color="gray-400" />
-      <EmptyCell />
+    <div className="grid grid-cols-18 grid-rows-7 gap-4 scale-90 -ml-12">
+      <Period1 />
     </div>
   );
 }
