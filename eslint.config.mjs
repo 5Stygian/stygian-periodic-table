@@ -7,11 +7,12 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+    "src-tauri",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
-    "next-env.d.ts",
+    "next-env.d.ts"
   ]),
 ]);
 

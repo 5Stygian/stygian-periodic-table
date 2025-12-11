@@ -1,0 +1,1 @@
+export type HasChildren = React.PropsWithChildren<{}>;
