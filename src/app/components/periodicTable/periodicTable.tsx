@@ -1,4 +1,5 @@
-import Element, { EmptyCell } from './elements/element';
+import Element from './elements/element';
+import EmptyCell from './elements/emptyCell';
 
 export default function PeriodicTable() {
   return (
