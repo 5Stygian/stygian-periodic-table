@@ -8,6 +8,7 @@ export default function PeriodicTable() {
       <Element symbol='H' name='Hydrogen' atomicNumber={1} color="gray-400" />
       <EmptyCell />
       <Element symbol='He' name='Helium' atomicNumber={2} color="gray-400" />
+      <EmptyCell />
     </div>
   );
 }
