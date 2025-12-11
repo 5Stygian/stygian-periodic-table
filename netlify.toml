@@ -1,3 +1,9 @@
 [build]
-# remove tauri from the deployment
-ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ':(exclude)src-tauri/*'
+  publish = "dist"
+  command = "npm run build"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ':(exclude)src-tauri/*'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
