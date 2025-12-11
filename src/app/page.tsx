@@ -1,15 +1,13 @@
-import { Main } from "next/document";
-
 import Sidebar from "./components/sidebar/Sidebar";
 import SidebarElement from "./components/sidebar/SidebarElement";
 
 export default function Home() {
   return (
-    <Main>
+    <main className="min-h-screen w-full">
       <Sidebar>
         <SidebarElement />
         <SidebarElement />
       </Sidebar>
-    </Main>
+    </main>
   );
 }
