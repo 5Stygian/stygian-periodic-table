@@ -2,7 +2,7 @@ import Cell from "../cell/cell.tsx"
 
 import config from "../../../data/config.ts";
 
-export default function Period5() {
+export default function Period6() {
   return (
     <>
       <Cell symbol="Cs" name="Cesium" atomicNumber={55} color={config.colors.alkaliMetal} />

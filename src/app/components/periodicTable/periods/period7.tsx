@@ -2,7 +2,7 @@ import Cell from "../cell/cell.tsx"
 
 import config from "../../../data/config.ts";
 
-export default function Period5() {
+export default function Period7() {
   return (
     <>
       <Cell symbol="Fr" name="Francium" atomicNumber={19} color={config.colors.alkaliMetal} />

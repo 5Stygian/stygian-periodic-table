@@ -8,7 +8,7 @@ import Period7 from "./periods/period7";
 
 export default function PeriodicTable() {
   return (
-    <div className="grid grid-cols-18 grid-rows-7 gap-x-4 scale-90 -ml-12 -mt-4">
+    <div className="grid gap-x-4 grid-cols-18 grid-rows-7 scale-90 -ml-12 -mt-4">
       <Period1 />
       <Period2 />
       <Period3 />
