@@ -19,7 +19,7 @@ export default function Element({
   const blockSizing = `min-w-25 min-h-25 scale-67`;
 
   if (!empty) { 
-    const blockStyle = `${blockSizing} border-2 shadow-2x1 shadow-${color} text-${color}`;
+    const blockStyle = `${blockSizing} border-2 shadow-2x1 ${color}`;
 
     return (
       <div className={blockStyle}>

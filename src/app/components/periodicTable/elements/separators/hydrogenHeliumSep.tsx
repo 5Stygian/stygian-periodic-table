@@ -1,6 +1,6 @@
-import Element from "./element";
+import Element from "../element";
 
-export default function HydrogenHeliumDist() {
+export default function HydrogenHeliumSep() {
   return (
     <>      
       <Element empty={true} />
