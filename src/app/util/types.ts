@@ -1,4 +1,4 @@
-export type HasChildren = React.PropsWithChildren<{}>;
+export type HasChildren = React.PropsWithChildren<unknown>;
 
 export interface Config {
   colors: {
