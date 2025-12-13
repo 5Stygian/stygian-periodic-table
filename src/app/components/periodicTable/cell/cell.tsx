@@ -83,7 +83,7 @@ export default function Cell({
           <div className="text-center">{name}</div>
           <div className="text-center text-sm mt-1">{family}</div>
         </div>
-      ); // return
+      ); // return regualr cell
     } else {
       blockStyle = `${blockStyle} place-content-center`;
 
@@ -92,21 +92,21 @@ export default function Cell({
           <div className="text-xl pl-1.5 text-center mb-3">{symbol}</div>
           <div className="text-center text-lg">{name}</div>
         </div>
-      ); // return
-    } // if
+      ); // return compressed f block
+    } // if (!compressedFBlock)
   } else {
     const elementArray: React.ReactNode[] = [];
     
     for (let i = 0; i < amount; i++) {
       elementArray.push(
         <div key={i} className={blockSizing} />
-      ); // push
-    } // for
+      ); // push empty cell
+    } // for amount of empty cells
 
     return (
       <>
         {elementArray}
       </>
-    ); // return
+    ); // return empty cells
   } // else
 } // Cell
