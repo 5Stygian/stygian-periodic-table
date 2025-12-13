@@ -7,7 +7,7 @@ export default function Period7() {
     <>
       <Cell symbol="Fr" name="Francium" atomicNumber={88} color={config.colors.alkaliMetal} />
       <Cell symbol="Ra" name="Radium" atomicNumber={87} color={config.colors.alkalineEarthMetal} />
-      <Cell compressedFBlock={true} name="Actinide Series" color={config.colors.actinide} />
+      <Cell compressedFBlock={true} name="Actinide Series" symbol="89 - 103" color={config.colors.actinide} />
       <Cell symbol="Rf" name="Rutherfordium" atomicNumber={104} color={config.colors.transitionMetal} />
       <Cell symbol="Db" name="Dubnium" atomicNumber={105} color={config.colors.transitionMetal} />
       <Cell symbol="Sg" name="Seaborgium" atomicNumber={106} color={config.colors.transitionMetal} />

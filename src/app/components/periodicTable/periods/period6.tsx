@@ -7,7 +7,7 @@ export default function Period6() {
     <>
       <Cell symbol="Cs" name="Cesium" atomicNumber={55} color={config.colors.alkaliMetal} />
       <Cell symbol="Ba" name="Barium" atomicNumber={56} color={config.colors.alkalineEarthMetal} />
-      <Cell compressedFBlock={true} name="Lanthanide Series" color={config.colors.lanthanide} />
+      <Cell compressedFBlock={true} name="Lanthanide Series" symbol="57 - 71" color={config.colors.lanthanide} />
       <Cell symbol="Hf" name="Hafnium" atomicNumber={72} color={config.colors.transitionMetal} />
       <Cell symbol="Ta" name="Tantalum" atomicNumber={73} color={config.colors.transitionMetal} />
       <Cell symbol="W" name="Tungsten" atomicNumber={74} color={config.colors.transitionMetal} />

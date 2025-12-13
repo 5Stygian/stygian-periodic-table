@@ -89,7 +89,8 @@ export default function Cell({
 
       return (
         <div className={blockStyle}>
-          <div className="text-center">{name}</div>
+          <div className="text-xl pl-1.5 text-center mb-3">{symbol}</div>
+          <div className="text-center text-lg">{name}</div>
         </div>
       ); // return
     } // if
