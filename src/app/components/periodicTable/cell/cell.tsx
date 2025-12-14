@@ -78,8 +78,8 @@ export default function Cell({
 
       return (
         <div className={blockStyle}>
-          <span className="text-lg pl-1.5 mb-1">{atomicNumber}</span>
-          <div className="text-center text-5xl -mt-2">{symbol}</div>
+          <span className="text-lg pl-1.5">{atomicNumber}</span>
+          <div className="text-center text-5xl -mt-1">{symbol}</div>
           <div className="text-center">{name}</div>
           <div className="text-center text-sm mt-1">{family}</div>
         </div>
@@ -94,7 +94,7 @@ export default function Cell({
         </div>
       ); // return compressed f block
     } // if (!compressedFBlock)
-  } else {
+  } else { // if cell is empty
     const elementArray: React.ReactNode[] = [];
     
     for (let i = 0; i < amount; i++) {
