@@ -164,4 +164,4 @@ export const Flerovium: Element     = new Element({name: "Flerovium", symbol: "F
 export const Moscovium: Element     = new Element({name: "Moscovium", symbol: "Mc", family: "postTransitionMetal", atomicNumber: 115, group: 15, period: 7});
 export const Livermorium: Element   = new Element({name: "Livermorium", symbol: "Lv", family: "postTransitionMetal", atomicNumber: 116, group: 16, period: 7});
 export const Tenessine: Element     = new Element({name: "Tenessine", symbol: "Ts", family: "halogen", atomicNumber: 117, group: 17, period: 7});
-export const Oganesson: Element     = new Element({name: "Oganesson", symbol: "O6", family: "nobleGas", atomicNumber: 118, group: 18, period: 7});
+export const Oganesson: Element     = new Element({name: "Oganesson", symbol: "Og", family: "nobleGas", atomicNumber: 118, group: 18, period: 7});
