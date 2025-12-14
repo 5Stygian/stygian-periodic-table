@@ -10,6 +10,13 @@ class Element {
         period: number,
     }
     ) {
+        this.name = name;
+        this.symbol = symbol;
+        this.family = family;
+        this.atomicNumber = atomicNumber;
+        this.group = group;
+        this.period = period;
+
         ELEMENTS.push(this);
     }
 }
