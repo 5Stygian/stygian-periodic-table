@@ -7,6 +7,7 @@ export default function Index() {
         <c.PeriodicTable />
         <c.ElementCard />
       </c.MainPage>
+      <c.License />
     </main>
   );
 }

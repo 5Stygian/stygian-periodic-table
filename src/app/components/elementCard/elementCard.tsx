@@ -5,9 +5,9 @@ export default function ElementCard() {
   const dataStyling = `min-w-110 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center ml-8 px-8`;
 
   return (
-    <div id="elementCard" className="w-screen flex justify-center items-center hover:cursor-default">
+    <div id="elementCard" className="w-screen flex justify-center items-center pb-20 hover:cursor-default">
       <div className={symbolStyling}>
-        <p id="elementCardSymbol" className="flex justify-center items-center text-7xl -mt-1">${NaE.symbol}</p>
+        <p id="elementCardSymbol" className="flex justify-center items-center text-7xl px-4">${NaE.symbol}</p>
       </div>
       <div className={dataStyling}>
         <table>
