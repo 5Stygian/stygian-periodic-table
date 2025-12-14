@@ -1,16 +1,6 @@
 let ELEMENTS: Element[] = [];
 
 class Element {
-    /**public constructor(
-        public readonly name        : string,
-        public readonly symbol      : string,
-        public readonly family      : string,
-        public readonly atomicNumber: number,
-        public readonly group       : number,
-        public readonly period      : number,
-    ) {
-        ELEMENTS.push(this);
-    }*/
     public constructor({name, symbol, family, atomicNumber, group, period}: {
         name: string,
         symbol: string,
