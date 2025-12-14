@@ -8,11 +8,7 @@ import Period7 from "./periods/period7.tsx";
 import Lanthanides from "./periods/lanthanides.tsx";
 import Actinides from "./periods/actinides.tsx";
 
-import ELEMENTS from "@/app/data/elements.ts";
-
 export default function PeriodicTable() {
-  console.log(ELEMENTS);
-
   return (
     <div className="grid gap-x-16 grid-cols-18 grid-rows-9 scale-87 max-w-420 lg:-translate-x-16 lg:mx-auto">
       <Period1 />

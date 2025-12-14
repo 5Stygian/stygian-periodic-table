@@ -1,6 +1,6 @@
 import Cell from "../cell/cell.tsx"
 
-import { Astatine, Barium, Bismuth, Cesium, Gold, Hafnium, Iridium, Lead, Mercury, NaE, Osmium, Platinum, Polonium, Radon, Rhenium, Tantalum, Thallium, Tungsten } from "@/app/data/elements.ts";
+import { Astatine, Barium, Bismuth, Cesium, Gold, Hafnium, Iridium, Lead, Mercury, Osmium, Platinum, Polonium, Radon, Rhenium, Tantalum, Thallium, Tungsten } from "@/app/data/elements.ts";
 
 export default function Period6() {
   return (
