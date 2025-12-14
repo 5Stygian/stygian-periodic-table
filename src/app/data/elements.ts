@@ -21,6 +21,8 @@ class Element {
     }
 }
 
+export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: -1, group: -1, period: -1});
+
 // period 1
 export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1});
 export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1});
