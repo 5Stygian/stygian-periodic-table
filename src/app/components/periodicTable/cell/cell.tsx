@@ -52,7 +52,7 @@ export default function Cell({
         const elementGroup = document.getElementById("elementCardGroup");
         const elementCardPeriod = document.getElementById("elementCardPeriod");
 
-        elementCard!.className = `w-screen flex justify-center items-center ${element!.color}`;
+        elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
         elementCardName!.innerHTML = `${element!.name}`
         elementCardFamily!.innerHTML = `${element!.familyText}`
