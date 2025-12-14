@@ -40,23 +40,37 @@ export default function Cell({
       </div>
     ); // return
   } else if (!empty) {
-    let blockStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
+    let cellStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
 
     if (!compressedFBlock) {
-      blockStyle = `${blockStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:cursor-default hover:scale-105 hover:z-10`;
-
       function handleClick() {
-        console.log(element!.name + " was clicked!");
+        const elementCard = document.getElementById("elementCard");
+        const elementCardSymbol = document.getElementById("elementCardSymbol");
+        const elementCardName = document.getElementById("elementCardName");
+        const elementCardFamily = document.getElementById("elementCardFamily");
+        const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
+        const elementGroup = document.getElementById("elementCardGroup");
+        const elementCardPeriod = document.getElementById("elementCardPeriod");
+
+        elementCard!.className = `w-screen flex justify-center items-center ${element!.color}`;
+        elementCardSymbol!.innerHTML = `${element!.symbol}`;
+        elementCardName!.innerHTML = `${element!.name}`
+        elementCardFamily!.innerHTML = `${element!.familyText}`
+        elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`
+        elementGroup!.innerHTML = `${element!.group}`
+        elementCardPeriod!.innerHTML = `${element!.period}`
       }
 
+      cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:cursor-default hover:scale-105 hover:z-10`;
+
       return (
-        <button type="button" onClick={handleClick} className={blockStyle}>
+        <div onClick={handleClick} className={cellStyle}>
           <span className="text-lg pl-1.5">{element!.atomicNumber}</span>
           <div className="text-center text-5xl -mt-1">{element!.symbol}</div>
           <div className="text-center">{element!.name}</div>
           <div className="text-center text-sm mt-1">{element!.familyText}</div>
-        </button>
-      ); // return regualr cell
+        </div>
+      ); // return regular cell
     } else if (element == undefined) {
       let color;
 
@@ -73,16 +87,16 @@ export default function Cell({
           break;
       } // switch
 
-      blockStyle = `${blockStyle} ${color} place-content-center`;
+      cellStyle = `${cellStyle} ${color} place-content-center`;
 
       return (
-        <div className={blockStyle}>
+        <div className={cellStyle}>
           <div className="text-xl pl-1.5 text-center mb-3">{range}</div>
           <div className="text-center text-lg">{text}</div>
         </div>
       ); // return compressed f block
     } // if (!compressedFBlock)
-  } else { // if cell is empty
+  } else { // if cell should be an empty cell
     const elementArray: React.ReactNode[] = [];
     
     for (let i = 0; i < amount; i++) {

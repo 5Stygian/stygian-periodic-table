@@ -22,7 +22,7 @@ export class Element {
 
     switch (this.family) {
       case "alkaliMetal":
-        this.familyText = "alkaliMetal";
+        this.familyText = "Alkali Metal";
         this.color = config.family.alkaliMetal;
         break;
       case "alkalineEarthMetal":
