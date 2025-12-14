@@ -43,63 +43,19 @@ export default function Cell({
     let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 font-bold`;
 
     if (!compressedFBlock) {
-      let familyText, color;
+      blockStyle = `${blockStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:cursor-default hover:scale-105 hover:z-10`;
 
-      switch (element!.family) {
-        case "alkaliMetal":
-          familyText = "Alkali Metal";
-          color = config.family.alkaliMetal;
-          break;
-        case "alkalineEarthMetal":
-          familyText = "Alkaline Earth Metal";
-          color = config.family.alkalineEarthMetal;
-          break;
-        case "transitionMetal":
-          familyText = <span>Transition<br />Metal</span>;
-          color = config.family.transitionMetal;
-          break;
-        case "postTransitionMetal":
-          familyText = "Post-Transition Metal";
-          color = config.family.postTransitionMetal;
-          break;
-        case "metalloid":
-          familyText = "Metalloid";
-          color = config.family.metalloid;
-          break;
-        case "nonmetal":
-          familyText = "Nonmetal";
-          color = config.family.nonmetal;
-          break;
-        case "halogen":
-          familyText = "Halogen";
-          color = config.family.halogen;
-          break;
-        case "nobleGas":
-          familyText = "Noble Gas";
-          color = config.family.nobleGas;
-          break;
-        case "lanthanide":
-          familyText = "Lanthanide";
-          color = config.family.lanthanide;
-          break;
-        case "actinide":
-          familyText = "Actinide";
-          color = config.family.actinide;
-          break;
-        default:
-          familyText = "Unknown";
-          break;
-      } // switch
-
-      blockStyle = `${blockStyle} ${color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:cursor-default hover:scale-105 hover:z-10`;
+      function handleClick() {
+        console.log(element!.name + " was clicked!");
+      }
 
       return (
-        <div className={blockStyle}>
+        <button type="button" onClick={handleClick} className={blockStyle}>
           <span className="text-lg pl-1.5">{element!.atomicNumber}</span>
           <div className="text-center text-5xl -mt-1">{element!.symbol}</div>
           <div className="text-center">{element!.name}</div>
-          <div className="text-center text-sm mt-1">{familyText}</div>
-        </div>
+          <div className="text-center text-sm mt-1">{element!.familyText}</div>
+        </button>
       ); // return regualr cell
     } else if (element == undefined) {
       let color;

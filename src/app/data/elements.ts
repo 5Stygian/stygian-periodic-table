@@ -1,23 +1,71 @@
 "use client";
 
+import config from "./config";
+
 export class Element {
-    [x: string|number]: string|number;
-    public constructor({name, symbol, family, atomicNumber, group, period}: {
-        name: string,
-        symbol: string,
-        family: string,
-        atomicNumber: number,
-        group: number|string,
-        period: number,
+  [x: string|number]: string|number;
+  public constructor({name, symbol, family, atomicNumber, group, period}: {
+    name: string,
+    symbol: string,
+    family: string,
+    atomicNumber: number,
+    group: number|string,
+    period: number,
+  }
+  ) {
+    this.name = name;
+    this.symbol = symbol;
+    this.family = family;
+    this.atomicNumber = atomicNumber;
+    this.group = group;
+    this.period = period;
+
+    switch (this.family) {
+      case "alkaliMetal":
+        this.familyText = "alkaliMetal";
+        this.color = config.family.alkaliMetal;
+        break;
+      case "alkalineEarthMetal":
+        this.familyText = "Alkaline Earth Metal";
+        this.color = config.family.alkalineEarthMetal;
+        break;
+      case "transitionMetal":
+        this.familyText = "Transition Metal";
+        this.color = config.family.transitionMetal;
+        break;
+      case "postTransitionMetal":
+        this.familyText = "Post-Transition Metal";
+        this.color = config.family.postTransitionMetal;
+        break;
+      case "metalloid":
+        this.familyText = "Metalloid";
+        this.color = config.family.metalloid;
+        break;
+      case "nonmetal":
+        this.familyText = "Nonmetal";
+        this.color = config.family.nonmetal;
+        break;
+      case "halogen":
+        this.familyText = "Halogen";
+        this.color = config.family.halogen;
+        break;
+      case "nobleGas":
+        this.familyText = "Noble Gas";
+        this.color = config.family.nobleGas;
+        break;
+      case "lanthanide":
+        this.familyText = "Lanthanide";
+        this.color = config.family.lanthanide;
+        break;
+      case "actinide":
+        this.familyText = "Actinide";
+        this.color = config.family.actinide;
+        break;
+      default:
+        this.familyText = "Unknown";
+        this.break;
     }
-    ) {
-        this.name = name;
-        this.symbol = symbol;
-        this.family = family;
-        this.atomicNumber = atomicNumber;
-        this.group = group;
-        this.period = period;
-    }
+  }
 }
 
 // !! ELEMENTS no longer exists !!
