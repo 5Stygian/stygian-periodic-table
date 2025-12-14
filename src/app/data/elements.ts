@@ -63,7 +63,8 @@ export class Element {
         break;
       default:
         this.familyText = "Unknown";
-        this.break;
+        this.color = "text-white";
+        break;
     }
   }
 }
