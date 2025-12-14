@@ -1,6 +1,6 @@
 let ELEMENTS: Element[] = [];
 
-class Element {
+export class Element {
     [x: string|number]: string|number;
     public constructor({name, symbol, family, atomicNumber, group, period}: {
         name: string,
@@ -94,40 +94,77 @@ export const Iodine: Element     = new Element({name: "Iodine", symbol: "I", fam
 export const Xenon: Element      = new Element({name: "Xenon", symbol: "Xe", family: "nobleGas", atomicNumber: 54, group: 18, period: 5});
 
 // Period 6
-export const Cesium: Element = new Element({name: "Cesium", symbol: "Cs", family: "alkaliMetal", atomicNumber: 55, group: 1, period: 5});
-export const Barium: Element = new Element({name: "Barium", symbol: "Ba", family: "alkalineEarthMetal", atomicNumber: 56, group: 2, period: 5});
+export const Cesium: Element = new Element({name: "Cesium", symbol: "Cs", family: "alkaliMetal", atomicNumber: 55, group: 1, period: 6});
+export const Barium: Element = new Element({name: "Barium", symbol: "Ba", family: "alkalineEarthMetal", atomicNumber: 56, group: 2, period: 6});
 
 // Lanthanides
-export const Lanthanum: Element    = new Element({name: "Lanthanum", symbol: "La", family: "lanthanide", atomicNumber: 57, group: "lanthanide", period: 5});
-export const Cerium: Element       = new Element({name: "Cerium", symbol: "Ce", family: "lanthanide", atomicNumber: 58, group: "lanthanide", period: 5});
-export const Praseodymium: Element = new Element({name: "Praseodymium", symbol: "Pr", family: "lanthanide", atomicNumber: 59, group: "lanthanide", period: 5});
-export const Neodymium: Element    = new Element({name: "Neodymium", symbol: "Nd", family: "lanthanide", atomicNumber: 60, group: "lanthanide", period: 5});
-export const Promethium: Element   = new Element({name: "Promethium", symbol: "Pm", family: "lanthanide", atomicNumber: 61, group: "lanthanide", period: 5});
-export const Samarium: Element     = new Element({name: "Cerium", symbol: "Sm", family: "lanthanide", atomicNumber: 62, group: "lanthanide", period: 5});
-export const Europium: Element     = new Element({name: "Europium", symbol: "Eu", family: "lanthanide", atomicNumber: 63, group: "lanthanide", period: 5});
-export const Gadolinium: Element   = new Element({name: "Gadolinium", symbol: "Gd", family: "lanthanide", atomicNumber: 64, group: "lanthanide", period: 5});
-export const Terbium: Element      = new Element({name: "Terbium", symbol: "Tb", family: "lanthanide", atomicNumber: 65, group: "lanthanide", period: 5});
-export const Dysprosium: Element   = new Element({name: "Dysprosium", symbol: "Dy", family: "lanthanide", atomicNumber: 66, group: "lanthanide", period: 5});
-export const Holmium: Element      = new Element({name: "Holmium", symbol: "Ho", family: "lanthanide", atomicNumber: 67, group: "lanthanide", period: 5});
-export const Erbium: Element       = new Element({name: "Erbium", symbol: "Er", family: "lanthanide", atomicNumber: 68, group: "lanthanide", period: 5});
-export const Thulium: Element      = new Element({name: "Thulium", symbol: "Tm", family: "lanthanide", atomicNumber: 69, group: "lanthanide", period: 5});
-export const Ytterbium: Element    = new Element({name: "Ytterbium", symbol: "Yb", family: "lanthanide", atomicNumber: 70, group: "lanthanide", period: 5});
-export const Lutetium: Element     = new Element({name: "Lutetium", symbol: "Lu", family: "lanthanide", atomicNumber: 71, group: 3, period: 5});
+export const Lanthanum: Element    = new Element({name: "Lanthanum", symbol: "La", family: "lanthanide", atomicNumber: 57, group: "lanthanide", period: 6});
+export const Cerium: Element       = new Element({name: "Cerium", symbol: "Ce", family: "lanthanide", atomicNumber: 58, group: "lanthanide", period: 6});
+export const Praseodymium: Element = new Element({name: "Praseodymium", symbol: "Pr", family: "lanthanide", atomicNumber: 59, group: "lanthanide", period: 6});
+export const Neodymium: Element    = new Element({name: "Neodymium", symbol: "Nd", family: "lanthanide", atomicNumber: 60, group: "lanthanide", period: 6});
+export const Promethium: Element   = new Element({name: "Promethium", symbol: "Pm", family: "lanthanide", atomicNumber: 61, group: "lanthanide", period: 6});
+export const Samarium: Element     = new Element({name: "Cerium", symbol: "Sm", family: "lanthanide", atomicNumber: 62, group: "lanthanide", period: 6});
+export const Europium: Element     = new Element({name: "Europium", symbol: "Eu", family: "lanthanide", atomicNumber: 63, group: "lanthanide", period: 6});
+export const Gadolinium: Element   = new Element({name: "Gadolinium", symbol: "Gd", family: "lanthanide", atomicNumber: 64, group: "lanthanide", period: 6});
+export const Terbium: Element      = new Element({name: "Terbium", symbol: "Tb", family: "lanthanide", atomicNumber: 65, group: "lanthanide", period: 6});
+export const Dysprosium: Element   = new Element({name: "Dysprosium", symbol: "Dy", family: "lanthanide", atomicNumber: 66, group: "lanthanide", period: 6});
+export const Holmium: Element      = new Element({name: "Holmium", symbol: "Ho", family: "lanthanide", atomicNumber: 67, group: "lanthanide", period: 6});
+export const Erbium: Element       = new Element({name: "Erbium", symbol: "Er", family: "lanthanide", atomicNumber: 68, group: "lanthanide", period: 6});
+export const Thulium: Element      = new Element({name: "Thulium", symbol: "Tm", family: "lanthanide", atomicNumber: 69, group: "lanthanide", period: 6});
+export const Ytterbium: Element    = new Element({name: "Ytterbium", symbol: "Yb", family: "lanthanide", atomicNumber: 70, group: "lanthanide", period: 6});
+export const Lutetium: Element     = new Element({name: "Lutetium", symbol: "Lu", family: "lanthanide", atomicNumber: 71, group: 3, period: 6});
 
-export const Hafnium: Element  = new Element({name: "Hafnium", symbol: "Hf", family: "transitionMetal", atomicNumber: 72, group: 4, period: 5});
-export const Tantalum: Element = new Element({name: "Tantalum", symbol: "Ta", family: "transitionMetal", atomicNumber: 73, group: 5, period: 5});
-export const Tungsten: Element = new Element({name: "Tungsten", symbol: "W", family: "transitionMetal", atomicNumber: 74, group: 6, period: 5});
-export const Rhenium: Element  = new Element({name: "Rhenium", symbol: "Re", family: "transitionMetal", atomicNumber: 75, group: 7, period: 5});
-export const Osmium: Element   = new Element({name: "Osmium", symbol: "Os", family: "transitionMetal", atomicNumber: 76, group: 8, period: 5});
-export const Iridium: Element  = new Element({name: "Iridium", symbol: "Ir", family: "transitionMetal", atomicNumber: 77, group: 9, period: 5});
-export const Platinum: Element = new Element({name: "Platinum", symbol: "Pt", family: "transitionMetal", atomicNumber: 78, group: 10, period: 5});
-export const Gold: Element     = new Element({name: "Gold", symbol: "Au", family: "transitionMetal", atomicNumber: 79, group: 11, period: 5});
-export const Mercury: Element  = new Element({name: "Mercury", symbol: "Hg", family: "transitionMetal", atomicNumber: 80, group: 13, period: 5});
-export const Thallium: Element = new Element({name: "Thallium", symbol: "Hl", family: "postTransitionMetal", atomicNumber: 81, group: 14, period: 5});
-export const Lead: Element     = new Element({name: "Lead", symbol: "Pb", family: "postTransitionMetal", atomicNumber: 82, group: 14, period: 5});
-export const Bismuth: Element  = new Element({name: "Bismuth", symbol: "Bi", family: "postTransitionMetal", atomicNumber: 83, group: 15, period: 5});
-export const Polonium: Element = new Element({name: "Polonium", symbol: "Sb", family: "metalloid", atomicNumber: 84, group: 16, period: 5});
-export const Astatine: Element = new Element({name: "Astatine", symbol: "At", family: "halogen", atomicNumber: 85, group: 17, period: 5});
-export const Radon: Element    = new Element({name: "Radon", symbol: "Rn", family: "nobleGas", atomicNumber: 86, group: 18, period: 5});
+export const Hafnium: Element  = new Element({name: "Hafnium", symbol: "Hf", family: "transitionMetal", atomicNumber: 72, group: 4, period: 6});
+export const Tantalum: Element = new Element({name: "Tantalum", symbol: "Ta", family: "transitionMetal", atomicNumber: 73, group: 5, period: 6});
+export const Tungsten: Element = new Element({name: "Tungsten", symbol: "W", family: "transitionMetal", atomicNumber: 74, group: 6, period: 6});
+export const Rhenium: Element  = new Element({name: "Rhenium", symbol: "Re", family: "transitionMetal", atomicNumber: 75, group: 7, period: 6});
+export const Osmium: Element   = new Element({name: "Osmium", symbol: "Os", family: "transitionMetal", atomicNumber: 76, group: 8, period: 6});
+export const Iridium: Element  = new Element({name: "Iridium", symbol: "Ir", family: "transitionMetal", atomicNumber: 77, group: 9, period: 6});
+export const Platinum: Element = new Element({name: "Platinum", symbol: "Pt", family: "transitionMetal", atomicNumber: 78, group: 10, period: 6});
+export const Gold: Element     = new Element({name: "Gold", symbol: "Au", family: "transitionMetal", atomicNumber: 79, group: 11, period: 6});
+export const Mercury: Element  = new Element({name: "Mercury", symbol: "Hg", family: "transitionMetal", atomicNumber: 80, group: 13, period: 6});
+export const Thallium: Element = new Element({name: "Thallium", symbol: "Hl", family: "postTransitionMetal", atomicNumber: 81, group: 14, period: 6});
+export const Lead: Element     = new Element({name: "Lead", symbol: "Pb", family: "postTransitionMetal", atomicNumber: 82, group: 14, period: 6});
+export const Bismuth: Element  = new Element({name: "Bismuth", symbol: "Bi", family: "postTransitionMetal", atomicNumber: 83, group: 15, period: 6});
+export const Polonium: Element = new Element({name: "Polonium", symbol: "Sb", family: "metalloid", atomicNumber: 84, group: 16, period: 6});
+export const Astatine: Element = new Element({name: "Astatine", symbol: "At", family: "halogen", atomicNumber: 85, group: 17, period: 6});
+export const Radon: Element    = new Element({name: "Radon", symbol: "Rn", family: "nobleGas", atomicNumber: 86, group: 18, period: 6});
+
+// Period 7
+export const Francium: Element = new Element({name: "Francium", symbol: "Fr", family: "alkaliMetal", atomicNumber: 87, group: 1, period: 7});
+export const Radium: Element   = new Element({name: "Radium", symbol: "Ra", family: "alkalineEarthMetal", atomicNumber: 88, group: 2, period: 7});
+
+// Actinides
+export const Actinium: Element     = new Element({name: "Actinium", symbol: "Ac", family: "actinide", atomicNumber: 89, group: "actinide", period: 7});
+export const Thorium: Element      = new Element({name: "Thorium", symbol: "Th", family: "actinide", atomicNumber: 90, group: "actinide", period: 7});
+export const Protactinium: Element = new Element({name: "Protactinium", symbol: "Pa", family: "actinide", atomicNumber: 91, group: "actinide", period: 7});
+export const Uranium: Element      = new Element({name: "Uranium", symbol: "U", family: "actinide", atomicNumber: 92, group: "actinide", period: 7});
+export const Neptunium: Element    = new Element({name: "Neptunium", symbol: "Np", family: "actinide", atomicNumber: 93, group: "actinide", period: 7});
+export const Plutonium: Element    = new Element({name: "Plutonium", symbol: "Pu", family: "actinide", atomicNumber: 94, group: "actinide", period: 7});
+export const Americium: Element    = new Element({name: "Americium", symbol: "Am", family: "actinide", atomicNumber: 95, group: "actinide", period: 7});
+export const Curium: Element       = new Element({name: "Curium", symbol: "Cm", family: "actinide", atomicNumber: 96, group: "actinide", period: 7});
+export const Berkelium: Element    = new Element({name: "Berkelium", symbol: "Bk", family: "actinide", atomicNumber: 97, group: "actinide", period: 7});
+export const Californium: Element  = new Element({name: "Californium", symbol: "Cf", family: "actinide", atomicNumber: 98, group: "actinide", period: 7});
+export const Einstienium: Element  = new Element({name: "Einstienium", symbol: "Es", family: "actinide", atomicNumber: 99, group: "actinide", period: 7});
+export const Fermium: Element      = new Element({name: "Fermium", symbol: "Er", family: "actinide", atomicNumber: 100, group: "actinide", period: 7});
+export const Mendelevium: Element  = new Element({name: "Mendelevium", symbol: "Md", family: "actinide", atomicNumber: 101, group: "actinide", period: 7});
+export const Nobelium: Element     = new Element({name: "Nobelium", symbol: "No", family: "actinide", atomicNumber: 102, group: "actinide", period: 7});
+export const Lawrencium: Element   = new Element({name: "Lawrencium", symbol: "Lr", family: "actinide", atomicNumber: 103, group: 3, period: 7});
+
+export const Rutherfordium: Element = new Element({name: "Rutherfordium", symbol: "Rf", family: "transitionMetal", atomicNumber: 104, group: 4, period: 7});
+export const Dubnium: Element       = new Element({name: "Dubnium", symbol: "Db", family: "transitionMetal", atomicNumber: 105, group: 5, period: 7});
+export const Seaborgium: Element    = new Element({name: "Seaborgium", symbol: "Sg", family: "transitionMetal", atomicNumber: 106, group: 6, period: 7});
+export const Bohrium: Element       = new Element({name: "Bohrium", symbol: "Bh", family: "transitionMetal", atomicNumber: 107, group: 7, period: 7});
+export const Hassium: Element       = new Element({name: "Hassium", symbol: "Hs", family: "transitionMetal", atomicNumber: 108, group: 8, period: 7});
+export const Meitnerium: Element    = new Element({name: "Meitnerium", symbol: "Mt", family: "transitionMetal", atomicNumber: 109, group: 9, period: 7});
+export const Darmstadium: Element   = new Element({name: "Darmstadium", symbol: "Ds", family: "transitionMetal", atomicNumber: 110, group: 10, period: 7});
+export const Roentgenium: Element   = new Element({name: "Roentgenium", symbol: "Rg", family: "transitionMetal", atomicNumber: 111, group: 11, period: 7});
+export const Copernicium: Element   = new Element({name: "Copernicium", symbol: "Cn", family: "transitionMetal", atomicNumber: 112, group: 13, period: 7});
+export const Nihonium: Element      = new Element({name: "Nihonium", symbol: "Nh", family: "postTransitionMetal", atomicNumber: 113, group: 14, period: 7});
+export const Flerovium: Element     = new Element({name: "Flerovium", symbol: "Fl", family: "postTransitionMetal", atomicNumber: 114, group: 14, period: 7});
+export const Moscovium: Element     = new Element({name: "Moscovium", symbol: "Mc", family: "postTransitionMetal", atomicNumber: 115, group: 15, period: 7});
+export const Livermorium: Element   = new Element({name: "Livermorium", symbol: "Lv", family: "postTransitionMetal", atomicNumber: 116, group: 16, period: 7});
+export const Tenessine: Element     = new Element({name: "Tenessine", symbol: "Ts", family: "halogen", atomicNumber: 117, group: 17, period: 7});
+export const Oganesson: Element     = new Element({name: "Oganesson", symbol: "O6", family: "nobleGas", atomicNumber: 118, group: 18, period: 7});
 
 export default ELEMENTS;

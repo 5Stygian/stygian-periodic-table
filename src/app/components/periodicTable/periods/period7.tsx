@@ -5,8 +5,8 @@ import config from "../../../data/config.ts";
 export default function Period7() {
   return (
     <>
-      <Cell symbol="Fr" name="Francium" atomicNumber={88} family={config.family.alkaliMetal} />
-      <Cell symbol="Ra" name="Radium" atomicNumber={87} family={config.family.alkalineEarthMetal} />
+      <Cell symbol="Fr" name="Francium" atomicNumber={87} family={config.family.alkaliMetal} />
+      <Cell symbol="Ra" name="Radium" atomicNumber={88} family={config.family.alkalineEarthMetal} />
       <Cell compressedFBlock={true} name="Actinide Series" symbol="89 - 103" family={config.family.actinide} />
       <Cell symbol="Rf" name="Rutherfordium" atomicNumber={104} family={config.family.transitionMetal} />
       <Cell symbol="Db" name="Dubnium" atomicNumber={105} family={config.family.transitionMetal} />
