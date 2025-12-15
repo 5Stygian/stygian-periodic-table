@@ -66,6 +66,7 @@ export default function Cell({
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
+                   select-none xl:select-auto 
                    hover:cursor-default hover:scale-105 hover:z-10 
                    focus:cursor-default focus:scale-105 focus:z-10
                    active:cursor-default active:scale-105 active:z-10`;
