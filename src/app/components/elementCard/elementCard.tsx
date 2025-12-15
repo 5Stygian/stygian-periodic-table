@@ -3,7 +3,7 @@ import { NaE } from "@/app/data/elements";
 export default function ElementCard() {
   const symbolStyling = `min-w-32 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center hover:cursor-default`;
   const dataTableStyling = `min-w-200 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center ml-8 px-8 py-12 hover:cursor-default`;
-  const dataTitleStyling = "pr-12 float-left";
+  const dataTitleStyling = "pr-12 float-left text-nowrap";
   const dataContentStyling = "text-white";
   
   return (
