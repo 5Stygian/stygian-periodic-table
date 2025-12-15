@@ -3,7 +3,7 @@
 import config from "./config";
 
 export class Element {
-  [x: string|number]: string|number;
+  [x: string | number | Record<string, string>]: string | number | Record<string, string>;
   public constructor({name, symbol, family, atomicNumber, group, period, electronConfiguration}: {
     name: string,
     symbol: string,
