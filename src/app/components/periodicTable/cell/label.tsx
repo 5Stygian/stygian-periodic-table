@@ -7,7 +7,7 @@ export default function Label({
   text,
   isPeriod = false
 }: LabelProps) {
-  let textStyle = "text-2xl font-bold";
+  let textStyle = "text-2xl font-bold select-none";
 
   if (!isPeriod) {
     textStyle = `${textStyle} lg:pt-16`;
