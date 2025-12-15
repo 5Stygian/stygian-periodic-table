@@ -91,11 +91,11 @@ export const Helium: Element   = new Element({name: "Helium", symbol: "He", fami
 export const Lithium: Element   = new Element({name: "Lithium", symbol: "Li", family: "alkaliMetal", atomicNumber: 3, group: 1, period: 2, fullElectronConfiguration: "1s2 2s1", nobleGasElectronConfiguration: "[He] 2s1"});
 export const Beryllium: Element = new Element({name: "Beryllium", symbol: "Be", family: "alkalineEarthMetal", atomicNumber: 4, group: 2, period: 2, fullElectronConfiguration: "1s2 2s2", nobleGasElectronConfiguration: "[He] 2s2"});
 export const Boron: Element     = new Element({name: "Boron", symbol: "B", family: "metalloid", atomicNumber: 5, group: 13, period: 2, fullElectronConfiguration: "1s2 2s2 2p1", nobleGasElectronConfiguration: "[He] 2s2 2p1"});
-export const Carbon: Element    = new Element({name: "Carbon", symbol: "C", family: "nonmetal", atomicNumber: 6, group: 14, period: 2, fullElectronConfiguration: "1s2 2s2 2p2", nobleGasElectronConfiguration: "[He] 2s2 2p2"});});
-export const Nitrogen: Element  = new Element({name: "Nitrogen", symbol: "N", family: "nonmetal", atomicNumber: 7, group: 15, period: 2, fullElectronConfiguration: "1s2 2s2 2p3", nobleGasElectronConfiguration: "[He] 2s2 2p3"});});
-export const Oxygen: Element    = new Element({name: "Oxygen", symbol: "O", family: "nonmetal", atomicNumber: 8, group: 16, period: 2, fullElectronConfiguration: "1s2 2s2 2p4", nobleGasElectronConfiguration: "[He] 2s2 2p4"});});
-export const Fluorine: Element  = new Element({name: "Fluorine", symbol: "F", family: "halogen", atomicNumber: 9, group: 17, period: 2, fullElectronConfiguration: "1s2 2s2 2p5", nobleGasElectronConfiguration: "[He] 2s2 2p5"});});
-export const Neon: Element      = new Element({name: "Neon", symbol: "Ne", family: "nobleGas", atomicNumber: 10, group: 18, period: 2, fullElectronConfiguration: "1s2 2s2 2p6", nobleGasElectronConfiguration: "[He] 2s2 2p6"});});
+export const Carbon: Element    = new Element({name: "Carbon", symbol: "C", family: "nonmetal", atomicNumber: 6, group: 14, period: 2, fullElectronConfiguration: "1s2 2s2 2p2", nobleGasElectronConfiguration: "[He] 2s2 2p2"});
+export const Nitrogen: Element  = new Element({name: "Nitrogen", symbol: "N", family: "nonmetal", atomicNumber: 7, group: 15, period: 2, fullElectronConfiguration: "1s2 2s2 2p3", nobleGasElectronConfiguration: "[He] 2s2 2p3"});
+export const Oxygen: Element    = new Element({name: "Oxygen", symbol: "O", family: "nonmetal", atomicNumber: 8, group: 16, period: 2, fullElectronConfiguration: "1s2 2s2 2p4", nobleGasElectronConfiguration: "[He] 2s2 2p4"});
+export const Fluorine: Element  = new Element({name: "Fluorine", symbol: "F", family: "halogen", atomicNumber: 9, group: 17, period: 2, fullElectronConfiguration: "1s2 2s2 2p5", nobleGasElectronConfiguration: "[He] 2s2 2p5"});
+export const Neon: Element      = new Element({name: "Neon", symbol: "Ne", family: "nobleGas", atomicNumber: 10, group: 18, period: 2, fullElectronConfiguration: "1s2 2s2 2p6", nobleGasElectronConfiguration: "[He] 2s2 2p6"});
 
 // Period 3
 export const Sodium: Element     = new Element({name: "Sodium", symbol: "Na", family: "alkaliMetal", atomicNumber: 11, group: 1, period: 3, fullElectronConfiguration: "1s2 2s2 2p6 3s1", nobleGasElectronConfiguration: "[Ne] 3s1"});
