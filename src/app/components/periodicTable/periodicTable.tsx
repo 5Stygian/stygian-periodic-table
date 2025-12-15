@@ -12,7 +12,7 @@ import Groups from "./periods/groups.tsx";
 export default function PeriodicTable() {
   return (
     <div className="grid gap-x-16 grid-cols-19 grid-rows-10 scale-87 max-w-420
-                    lg:-ml-32
+                    lg:-ml-32 lg:scale-80
                     xl:-translate-x-16 xl:mx-auto">
       <Groups />
       <Period1 />
