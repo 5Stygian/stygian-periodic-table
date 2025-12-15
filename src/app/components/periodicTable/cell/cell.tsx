@@ -65,8 +65,8 @@ export default function Cell({
         elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`;
         elementGroup!.innerHTML = `${element!.group}`;
         elementCardPeriod!.innerHTML = `${element!.period}`;
-        elementCardECFull!.innerHTML = `${String(element!.electronConfiguration.full)}`;
-        elementCardECNobleGas!.innerHTML = `${String(element!.electronConfiguration.nobleGas)}`;
+        elementCardECFull!.innerHTML = `${String(element!.fullElectronConfiguration)}`;
+        elementCardECNobleGas!.innerHTML = `${String(element!.nobleGasElectronConfiguration)}`;
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
