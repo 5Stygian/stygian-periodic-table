@@ -39,13 +39,13 @@ export default function ElementCard() {
             <tr>
               <th className={dataTitleStyling}>Full</th>
               <td id="elementCardECFull" className="text-white">
-                {typeof element.symbol === 'object' ? JSON.stringify(element.symbol) : String(element.symbol)}
+                {typeof NaE.electronConfiguration.full === 'object' ? JSON.stringify(NaE.electronConfiguration.full) : String(NaE.electronConfiguration.full)}
               </td>
             </tr>
             <tr>
               <th className={dataTitleStyling}>Noble Gas</th>
               <td id="elementCardECNobleGas" className="text-white">
-                {typeof element.symbol === 'object' ? JSON.stringify(element.symbol) : String(element.symbol)}
+                {typeof NaE.electronConfiguration.nobleGas === 'object' ? JSON.stringify(NaE.electronConfiguration.nobleGas) : String(NaE.electronConfiguration.nobleGas)}
               </td>
             </tr>
           </tbody>
