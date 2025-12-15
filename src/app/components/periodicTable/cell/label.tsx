@@ -10,9 +10,9 @@ export default function Label({
   let textStyle = "text-2xl font-bold";
 
   if (!isPeriod) {
-    textStyle = `${textStyle} lg:pt-16`;
+    textStyle = `${textStyle} xl:pt-16`;
   } else {
-    textStyle = `${textStyle} md:pl-10 lg:pl-10`;
+    textStyle = `${textStyle} lg:pl-10 xl:pl-10`;
   }
   
   return (
