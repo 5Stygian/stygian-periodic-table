@@ -4,13 +4,14 @@ import config from "./config";
 
 export class Element {
   [x: string|number]: string|number;
-  public constructor({name, symbol, family, atomicNumber, group, period}: {
+  public constructor({name, symbol, family, atomicNumber, group, period, electronConfiguration}: {
     name: string,
     symbol: string,
     family: string,
     atomicNumber: number,
     group: number|string,
     period: number,
+    electronConfiguration: Record<string, string>
   }
   ) {
     this.name = name;
@@ -19,7 +20,8 @@ export class Element {
     this.atomicNumber = atomicNumber;
     this.group = group;
     this.period = period;
-
+    this.electronConfiguration = electronConfiguration;
+    
     switch (this.family) {
       case "alkaliMetal":
         this.familyText = "Alkali Metal";
@@ -75,11 +77,11 @@ export class Element {
 // Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
 // instead of ELEMENTS[10], with 10 being Neon's atomic number.
 // NaE - Not an Element
-export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN});
+export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, electronConfiguration: {"full": "", "nobleGas": ""}});
 
 // Period 1
-export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1});
-export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1});
+export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, electronConfiguration: {"full": "1s1", "nobleGas": "N/A"}}});
+export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1, electronConfiguration: {"full": "1s2", "nobleGas": "N/A"}}});
 
 // Period 2
 export const Lithium: Element   = new Element({name: "Lithium", symbol: "Li", family: "alkaliMetal", atomicNumber: 3, group: 1, period: 2});
