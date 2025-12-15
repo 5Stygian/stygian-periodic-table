@@ -80,8 +80,8 @@ export class Element {
 export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, electronConfiguration: {"full": "", "nobleGas": ""}});
 
 // Period 1
-export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, electronConfiguration: {"full": "1s1", "nobleGas": "N/A"}}});
-export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1, electronConfiguration: {"full": "1s2", "nobleGas": "N/A"}}});
+export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, electronConfiguration: {"full": "1s1", "nobleGas": "N/A"}});
+export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1, electronConfiguration: {"full": "1s2", "nobleGas": "N/A"}});
 
 // Period 2
 export const Lithium: Element   = new Element({name: "Lithium", symbol: "Li", family: "alkaliMetal", atomicNumber: 3, group: 1, period: 2});
