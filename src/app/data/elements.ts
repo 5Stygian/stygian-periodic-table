@@ -5,7 +5,7 @@ import React from 'react';
 import config from "./config";
 
 export class Element {
-  [x: React.ReactNode]: React.ReactNode;
+  [x: string | number]: string | number;
   public constructor({name, symbol, family, atomicNumber, group, period, electronConfiguration}: {
     name: string,
     symbol: string,
