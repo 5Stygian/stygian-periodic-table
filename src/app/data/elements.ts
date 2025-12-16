@@ -2,15 +2,40 @@
 
 import config from "./config";
 
+interface ElementDict {
+  name: string;
+  symbol: string;
+  family: string;
+  atomicNumber: number;
+  group: number | string;
+  period: number;
+  fullElectronConfiguration: string;
+  nobleGasElectronConfiguration: string;
+  tags: string[];
+}
+
 export class Element {
-  [x: string]: string | string[] | number;
-  
+  name: string;
+  symbol: string;
+  family: string;
+  atomicNumber: number;
+  group: number | string;
+  period: number;
+  fullElectronConfiguration: string;
+  nobleGasElectronConfiguration: string;
+  tags: string[];
+
+  dict: ElementDict;
+  familyText: string;
+  color: string;
+  tagsGroup: string;
+
   public constructor({name, symbol, family, atomicNumber, group, period, fullElectronConfiguration, nobleGasElectronConfiguration, tags=[]}: {
     name: string,
     symbol: string,
     family: string,
     atomicNumber: number,
-    group: number|string,
+    group: number | string,
     period: number,
     fullElectronConfiguration: string,
     nobleGasElectronConfiguration: string,
@@ -104,7 +129,18 @@ export class Element {
     this.tags.push(this.family);
     this.tags.push(this.tagsGroup);
     this.tags.push(`period ${this.period}`);
-    
+
+    this.dict = {
+      "name": this.name,
+      "symbol": this.symbol,
+      "family": this.family,
+      "atomicNumber": this.atomicNumber,
+      "group": this.group,
+      "period": this.period,
+      "fullElectronConfiguration": this.fullElectronConfiguration,
+      "nobleGasElectronConfiguration": this.nobleGasElectronConfiguration,
+      "tags": this.tags
+    }
   }
 }
 
