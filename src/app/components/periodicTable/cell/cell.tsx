@@ -58,7 +58,7 @@ export default function Cell({
       const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
       const elementCardTags = document.getElementById("elementCardTags");
 
-      // 
+      // create a list of tags with spaces in between them
       let tags = '';
       const tagsArray = element!.tags;
       
