@@ -1,6 +1,6 @@
 import Cell from "../cell/cell.tsx";
 
-import { Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einstienium, Fermium, Mendelevium, Nobelium, Lawrencium } from "@/app/data/elements.ts";
+import { Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium } from "@/app/data/elements.ts";
 
 export default function Actinides() {
   return (
@@ -16,7 +16,7 @@ export default function Actinides() {
       <Cell element={Curium} />
       <Cell element={Berkelium} />
       <Cell element={Californium} />
-      <Cell element={Einstienium} />
+      <Cell element={Einsteinium} />
       <Cell element={Fermium} />
       <Cell element={Mendelevium} />
       <Cell element={Nobelium} />

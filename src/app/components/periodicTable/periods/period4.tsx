@@ -1,6 +1,6 @@
 import Cell from "../cell/cell.tsx"
 
-import { Potassium, Calcium, Scandium, Titanium, Vandium, Chromium, Manganese, Iron, Cobalt, Nickel, Copper, Zinc, Gallium, Germanium, Arsenic, Selenium, Bromine, Krypton } from "@/app/data/elements.ts";
+import { Potassium, Calcium, Scandium, Titanium, Vanadium, Chromium, Manganese, Iron, Cobalt, Nickel, Copper, Zinc, Gallium, Germanium, Arsenic, Selenium, Bromine, Krypton } from "@/app/data/elements.ts";
 import Label from "../cell/label.tsx";
 
 export default function Period4() {
@@ -11,7 +11,7 @@ export default function Period4() {
       <Cell element={Calcium} />
       <Cell element={Scandium} />
       <Cell element={Titanium} />
-      <Cell element={Vandium} />
+      <Cell element={Vanadium} />
       <Cell element={Chromium} />
       <Cell element={Manganese} />
       <Cell element={Iron} />

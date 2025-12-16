@@ -25,7 +25,7 @@ export class Element {
   nobleGasElectronConfiguration: string;
   tags: string[];
 
-  dict: ElementDict;
+  //dict: ElementDict;
   familyText: string;
   color: string;
   tagsGroup: string;
@@ -130,6 +130,7 @@ export class Element {
     this.tags.push(this.tagsGroup);
     this.tags.push(`period ${this.period}`);
 
+    /**
     this.dict = {
       "name": this.name,
       "symbol": this.symbol,
@@ -141,6 +142,7 @@ export class Element {
       "nobleGasElectronConfiguration": this.nobleGasElectronConfiguration,
       "tags": this.tags
     }
+    */
   }
 }
 
