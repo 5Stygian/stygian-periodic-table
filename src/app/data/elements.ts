@@ -70,12 +70,24 @@ export class Element {
       case "lanthanide":
         this.familyText = "Lanthanide";
         this.color = config.family.lanthanide;
-        this.tagsGroup = `${this.group}`;
+        
+        if (this.atomicNumber == 71) {
+          this.tagsGroup = `group ${this.group}`;
+        } else {
+          this.tagsGroup = `${this.group}`;
+        }
+        
         break;
       case "actinide":
         this.familyText = "Actinide";
         this.color = config.family.actinide;
-        this.tagsGroup = `${this.group}`;
+        
+        if (this.atomicNumber == 103) {
+          this.tagsGroup = `group ${this.group}`;
+        } else {
+          this.tagsGroup = `${this.group}`;
+        }
+        
         break;
       default:
         this.familyText = "Unknown";
