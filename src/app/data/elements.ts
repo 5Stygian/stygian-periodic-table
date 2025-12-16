@@ -92,7 +92,7 @@ export class Element {
       case "unknown":
         this.familyText = "Unknown";
         this.color = config.family.unknown;
-        this.tagsGroup = `${this.group}`;
+        this.tagsGroup = `group ${this.group}`;
         break;
       default:
         this.familyText = "ERROR";
