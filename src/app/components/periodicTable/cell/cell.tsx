@@ -58,23 +58,17 @@ export default function Cell({
       const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
       const elementCardTags = document.getElementById("elementCardTags");
 
+      // 
+      let tags = '';
+      const tagsArray = element!.tags;
+      
+      if (Array.isArray(tagsArray)) {
+        tags = tagsArray.join(' ');
+      } else if (typeof tagsArray === 'string') {
+        tags = tagsArray;
+      }
+      
       function handleClick() {
-        let tags = '';
-        const tagsArray = element!.tags;
-        
-        if (Array.isArray(tagsArray)) {
-          // tags is string[]
-          tags = tagsArray.join(' ');
-        } else if (typeof tagsArray === 'string') {
-          // tags is string
-          tags = tagsArray;
-        } else if (tagsArray != null) {
-          // number or other: convert to string
-          tags = String(tagsArray);
-        } else {
-          tags = '';
-        }
-        
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
         elementCardName!.innerHTML = `${element!.name}`;
