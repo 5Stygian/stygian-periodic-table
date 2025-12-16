@@ -59,10 +59,20 @@ export default function Cell({
       const elementCardTags = document.getElementById("elementCardTags");
 
       function handleClick() {
-        let tags: string;
+        let tags = '';
+        const tagsArray = element!.tags;
         
-        for (let i = 0; i < element!.tags.length; i++) {
-          tags = `${tags} ${element!.tags[i]}`;
+        if (Array.isArray(tagsArray)) {
+          // tags is string[]
+          tags = tagsArray.join(' ');
+        } else if (typeof tagsArray === 'string') {
+          // tags is string
+          tags = tagsArray;
+        } else if (tagsArray != null) {
+          // number or other: convert to string
+          tags = String(tagsArray);
+        } else {
+          tags = '';
         }
         
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
