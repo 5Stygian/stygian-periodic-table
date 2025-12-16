@@ -10,7 +10,8 @@ const config = {
         "nonmetal": "text-green-400",
         "halogen": "text-pink-500",
         "nobleGas": "text-purple-600",
-        "unknown": "text-white"
+        "unknown": "text-white",
+        "error": "text-red-400"
     }
 }
 
