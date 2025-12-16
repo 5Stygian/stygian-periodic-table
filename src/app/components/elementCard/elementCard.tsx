@@ -1,13 +1,13 @@
 import { NaE } from "@/app/data/elements";
 
 export default function ElementCard() {
-  const symbolStyling = `min-w-32 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex float-top justify-center hover:cursor-default`;
+  const symbolStyling = `min-w-32 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center hover:cursor-default`;
   const dataTableStyling = `min-w-220 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center ml-8 px-8 py-6 hover:cursor-default`;
   const dataTitleStyling = "pr-12 float-left text-nowrap";
   const dataContentStyling = "text-white";
   
   return (
-    <div id="elementCard" className="w-screen flex justify-center items-center pb-20 hover:cursor-default">
+    <div id="elementCard" className="w-screen flex justify-center pb-20 hover:cursor-default">
       <div className={symbolStyling}>
         <p id="elementCardSymbol" className="flex justify-center items-center text-7xl px-4">${NaE.symbol}</p>
       </div>
