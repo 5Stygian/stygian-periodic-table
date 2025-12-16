@@ -7,7 +7,7 @@ export default function ElementCard() {
   const dataContentStyling = "text-white";
   
   return (
-    <div id="elementCard" className="w-screen flex justify-center pb-20 hover:cursor-default">
+    <div id="elementCard" className="w-screen flex justify-center align-self-start pb-20 hover:cursor-default">
       <div className={symbolStyling}>
         <p id="elementCardSymbol" className="flex justify-center items-center text-7xl px-4">${NaE.symbol}</p>
       </div>
