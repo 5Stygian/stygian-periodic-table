@@ -9,7 +9,8 @@ const config = {
         "metalloid": "text-teal-500",
         "nonmetal": "text-green-400",
         "halogen": "text-pink-500",
-        "nobleGas": "text-purple-600"
+        "nobleGas": "text-purple-600",
+        "unknown": "text-white"
     }
 }
 
