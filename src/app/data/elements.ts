@@ -13,7 +13,7 @@ export class Element {
     period: number,
     fullElectronConfiguration: string,
     nobleGasElectronConfiguration: string,
-    tags?: string[]
+    tags: string[]
   }
   ) {
     this.name = name;
