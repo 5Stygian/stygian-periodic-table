@@ -47,17 +47,6 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
-      const elementCard = document.getElementById("elementCard");
-      const elementCardSymbol = document.getElementById("elementCardSymbol");
-      const elementCardName = document.getElementById("elementCardName");
-      const elementCardFamily = document.getElementById("elementCardFamily");
-      const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
-      const elementGroup = document.getElementById("elementCardGroup");
-      const elementCardPeriod = document.getElementById("elementCardPeriod");
-      const elementCardECFull = document.getElementById("elementCardECFull");
-      const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
-      const elementCardTags = document.getElementById("elementCardTags");
-
       // create a list of tags with spaces in between them
       let tags = '';
       const tagsArray = element!.tags;
@@ -69,6 +58,17 @@ export default function Cell({
       }
       
       function handleClick() {
+        const elementCard = document.getElementById("elementCard");
+        const elementCardSymbol = document.getElementById("elementCardSymbol");
+        const elementCardName = document.getElementById("elementCardName");
+        const elementCardFamily = document.getElementById("elementCardFamily");
+        const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
+        const elementGroup = document.getElementById("elementCardGroup");
+        const elementCardPeriod = document.getElementById("elementCardPeriod");
+        const elementCardECFull = document.getElementById("elementCardECFull");
+        const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
+        const elementCardTags = document.getElementById("elementCardTags");
+        
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
         elementCardName!.innerHTML = `${element!.name}`;
