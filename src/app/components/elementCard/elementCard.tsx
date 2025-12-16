@@ -46,6 +46,9 @@ export default function ElementCard() {
               <td id="elementCardECNobleGas" className={dataContentStyling}>{NaE.nobleGasElectronConfiguration}</td>
             </tr>
             <tr>
+              <th className={dataContentStyling} colSpan={2}><br />Misc</th>
+            </tr>
+            <tr>
               <th className={dataTitleStyling}>Tags</th>
               <td id="elementCardTags" className={dataContentStyling}>{NaE.tags}</td>
             </tr>
