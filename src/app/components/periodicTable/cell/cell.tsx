@@ -47,18 +47,24 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
-      function handleClick() {
-        const elementCard = document.getElementById("elementCard");
-        const elementCardSymbol = document.getElementById("elementCardSymbol");
-        const elementCardName = document.getElementById("elementCardName");
-        const elementCardFamily = document.getElementById("elementCardFamily");
-        const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
-        const elementGroup = document.getElementById("elementCardGroup");
-        const elementCardPeriod = document.getElementById("elementCardPeriod");
-        const elementCardECFull = document.getElementById("elementCardECFull");
-        const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
-        const elementCardTags = document.getElementById("elementCardTags");
+      const elementCard = document.getElementById("elementCard");
+      const elementCardSymbol = document.getElementById("elementCardSymbol");
+      const elementCardName = document.getElementById("elementCardName");
+      const elementCardFamily = document.getElementById("elementCardFamily");
+      const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
+      const elementGroup = document.getElementById("elementCardGroup");
+      const elementCardPeriod = document.getElementById("elementCardPeriod");
+      const elementCardECFull = document.getElementById("elementCardECFull");
+      const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
+      const elementCardTags = document.getElementById("elementCardTags");
 
+      function handleClick() {
+        let tags: string;
+        
+        for (let i = 0; i < element!.tags.length; i++) {
+          tags = `${tags} ${element!.tags[i]}`;
+        }
+        
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
         elementCardName!.innerHTML = `${element!.name}`;
@@ -68,7 +74,7 @@ export default function Cell({
         elementCardPeriod!.innerHTML = `${element!.period}`;
         elementCardECFull!.innerHTML = `${String(element!.fullElectronConfiguration)}`;
         elementCardECNobleGas!.innerHTML = `${String(element!.nobleGasElectronConfiguration)}`;
-        elementCardTags!.innerHTML = `${String(element!.tags)} `;
+        elementCardTags!.innerHTML = `${tags}`;
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
