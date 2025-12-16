@@ -3,7 +3,16 @@
 import config from "./config";
 
 export class Element {
-  [x: string | number | string[] | undefined]: string | number | string[] | undefined;
+  name: string;
+  symbol: string;
+  family: string;
+  atomicNumber: number;
+  group: number|string;
+  period: number;
+  fullElectronConfiguration: string;
+  nobleGasElectronConfiguration: string;
+  tags?: string[];
+  
   public constructor({name, symbol, family, atomicNumber, group, period, fullElectronConfiguration, nobleGasElectronConfiguration, tags}: {
     name: string,
     symbol: string,
@@ -14,8 +23,7 @@ export class Element {
     fullElectronConfiguration: string,
     nobleGasElectronConfiguration: string,
     tags?: string[]
-  }
-  ) {
+  }) {
     this.name = name;
     this.symbol = symbol;
     this.family = family;
