@@ -1,5 +1,5 @@
 export default function ElementCard() {
-  const symbolStyling = `min-w-32 w-min min-h-40 -mt-48 bg-black border-3 shadow-2x1 font-bold flex justify-center items-center hover:cursor-default`;
+  const symbolStyling = `min-w-32 w-min min-h-40 -mt-45 bg-black border-3 shadow-2x1 font-bold flex justify-center items-center hover:cursor-default`;
   const dataTableStyling = `basis-5x1 min-h-40 bg-black border-3 shadow-2x1 font-bold flex justify-center items-center ml-8 px-8 py-6 hover:cursor-default`;
   const dataTitleStyling = "pr-12 float-left text-nowrap";
   const dataContentStyling = "text-white";
