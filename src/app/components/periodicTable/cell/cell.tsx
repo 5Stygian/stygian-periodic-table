@@ -48,7 +48,12 @@ export default function Cell({
   } else if (!empty) {
     if (!nonElement && !label) {
       // create a list of tags with spaces in between them
-      let tags = element!.tags.join(", ");
+      let tags = "";
+      const tagsArray = element!.tags;
+
+      if (Array.isArray(tagsArray)) {
+        tags = tagsArray.join(", ");
+      }
       
       function handleClick() {
         const elementCard = document.getElementById("elementCard");
