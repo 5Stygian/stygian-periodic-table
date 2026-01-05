@@ -3,6 +3,6 @@ import PeriodicTable from "./periodicTable/periodicTable";
 import ElementCard from "./elementCard/elementCard";
 import License from "./misc/license";
 import SourceCode from "./misc/sourceCode";
-import Sidebar from "./sidebar/sidebar"; // <-- ts is ragebaiting me
+// <-- ts is ragebaiting me <-- here lies the sidebar import
 
-export { MainPage, Sidebar, PeriodicTable, ElementCard, License, SourceCode };
+export { MainPage, PeriodicTable, ElementCard, License, SourceCode };

@@ -33,6 +33,10 @@ export default function ElementCard() {
               <td id="elementCardPeriod" className={dataContentStyling}>$element.period</td>
             </tr>
             <tr>
+              <th className={dataTitleStyling}>Electronegativity</th>
+              <td id="elementCardElectronegativity" className={dataContentStyling}>$element.electronegativity</td>
+            </tr>
+            <tr>
               <th className={dataContentStyling} colSpan={2}><br />Electron Configuration</th>
             </tr>
             <tr>

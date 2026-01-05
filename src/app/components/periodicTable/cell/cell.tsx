@@ -65,6 +65,7 @@ export default function Cell({
         const elementCardECFull = document.getElementById("elementCardECFull");
         const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
         const elementCardTags = document.getElementById("elementCardTags");
+        const elementCardElectronegativity = document.getElementById("elementCardElectronegativity");
         
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
@@ -73,6 +74,7 @@ export default function Cell({
         elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`;
         elementGroup!.innerHTML = `${element!.group}`;
         elementCardPeriod!.innerHTML = `${element!.period}`;
+        elementCardElectronegativity!.innerHTML = `${element!.electronegativity}`;
         elementCardECFull!.innerHTML = `${String(element!.fullElectronConfiguration)}`;
         elementCardECNobleGas!.innerHTML = `${String(element!.nobleGasElectronConfiguration)}`;
         elementCardTags!.innerHTML = `${tags}`;
