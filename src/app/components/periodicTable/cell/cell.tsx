@@ -5,7 +5,7 @@
 import React from "react";
 
 import config from "@/app/data/config";
-import { elementType, nameOf, symbolOf, groupOf, periodOf, atomicNumberOf, electronegativityOf, fullElectronConfigurationOf, nobleGasElectronConfigurationOf, getFamilyTextOf } from "@/app/data/newelements";
+import { elementType, nameOf, symbolOf, groupOf, periodOf, atomicNumberOf, electronegativityOf, fullElectronConfigurationOf, nobleGasElectronConfigurationOf, getFamilyTextOf, getColorOf } from "@/app/data/newelements";
 
 const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67";
 
@@ -59,7 +59,7 @@ export default function Cell({
         const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
         const elementCardElectronegativity = document.getElementById("elementCardElectronegativity");
         
-        elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
+        elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${getColorOf(element!)}`;
         elementCardSymbol!.innerHTML = `${symbolOf(element!)}`;
         elementCardName!.innerHTML = `${nameOf(element!)}`;
         elementCardFamily!.innerHTML = `${getFamilyTextOf(element!)}`;
@@ -71,7 +71,7 @@ export default function Cell({
         elementCardECNobleGas!.innerHTML = `${nobleGasElectronConfigurationOf(element!)}`;
       }
 
-      cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
+      cellStyle = `${cellStyle} ${getColorOf(element!)} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
                    select-none xl:select-auto 
                    hover:cursor-default hover:scale-105 hover:z-10 
                    focus:cursor-default focus:scale-105 focus:z-10
