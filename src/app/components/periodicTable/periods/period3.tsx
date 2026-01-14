@@ -1,21 +1,21 @@
 import Cell from "../cell/cell.tsx"
-
-import { Sodium, Magnesium, Aluminum, Silicon, Phosphorus, Sulfur, Chlorine, Argon } from "@/app/data/elements.ts";
 import Label from "../cell/label.tsx";
+
+import elements from "@/app/data/newelements.ts";
 
 export default function Period3() {
   return (
     <>
       <Label isPeriod={true} text="3"/>
-      <Cell element={Sodium} />
-      <Cell element={Magnesium} />
+      <Cell element={elements.sodium} />
+      <Cell element={elements.magnesium} />
       <Cell empty={true} amount={10} />
-      <Cell element={Aluminum} />
-      <Cell element={Silicon} />
-      <Cell element={Phosphorus} />
-      <Cell element={Sulfur} />
-      <Cell element={Chlorine} />
-      <Cell element={Argon} />
+      <Cell element={elements.aluminum} />
+      <Cell element={elements.silicon} />
+      <Cell element={elements.phosphorus} />
+      <Cell element={elements.sulfur} />
+      <Cell element={elements.chlorine} />
+      <Cell element={elements.argon} />
     </>
   );
 }

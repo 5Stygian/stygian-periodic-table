@@ -1,26 +1,26 @@
 import Cell from "../cell/cell.tsx";
 
-import { Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium } from "@/app/data/elements.ts";
+import elements from "@/app/data/newelements.ts";
 
 export default function Actinides() {
   return (
     <>
       <Cell empty={true} amount={4} />
-      <Cell element={Actinium} />
-      <Cell element={Thorium} />
-      <Cell element={Protactinium} />
-      <Cell element={Uranium} />
-      <Cell element={Neptunium} />
-      <Cell element={Plutonium} />
-      <Cell element={Americium} />
-      <Cell element={Curium} />
-      <Cell element={Berkelium} />
-      <Cell element={Californium} />
-      <Cell element={Einsteinium} />
-      <Cell element={Fermium} />
-      <Cell element={Mendelevium} />
-      <Cell element={Nobelium} />
-      <Cell element={Lawrencium} />
+      <Cell element={elements.actinium} />
+      <Cell element={elements.thorium} />
+      <Cell element={elements.protactinium} />
+      <Cell element={elements.uranium} />
+      <Cell element={elements.neptunium} />
+      <Cell element={elements.plutonium} />
+      <Cell element={elements.americium} />
+      <Cell element={elements.curium} />
+      <Cell element={elements.berkelium} />
+      <Cell element={elements.californium} />
+      <Cell element={elements.einsteinium} />
+      <Cell element={elements.fermium} />
+      <Cell element={elements.mendelevium} />
+      <Cell element={elements.nobelium} />
+      <Cell element={elements.lawrencium} />
     </>
   );
 }

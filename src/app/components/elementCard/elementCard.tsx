@@ -47,13 +47,6 @@ export default function ElementCard() {
               <th className={dataTitleStyling}>Noble Gas</th>
               <td id="elementCardECNobleGas" className={dataContentStyling}>$element.nobleGasElectronConfiguration</td>
             </tr>
-            <tr>
-              <th className={dataContentStyling} colSpan={2}><br />Misc</th>
-            </tr>
-            <tr>
-              <th className={dataTitleStyling}>Tags</th>
-              <td id="elementCardTags" className={dataContentStyling}>$element.tags</td>
-            </tr>
           </tbody>
         </table>
       </div>

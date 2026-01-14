@@ -5,13 +5,13 @@
 import React from "react";
 
 import config from "@/app/data/config";
-import { Element } from "@/app/data/elements";
+import { elementType, nameOf, symbolOf, groupOf, periodOf, atomicNumberOf, electronegativityOf, fullElectronConfigurationOf, nobleGasElectronConfigurationOf, getFamilyTextOf } from "@/app/data/newelements";
 
 const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67";
 
 interface ElementProps {
   // element data
-  element?: Element;
+  element?: elementType;
   
   // display
   text?: string;
@@ -47,13 +47,6 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
-      // create a list of tags with spaces in between them
-      let tags = "";
-      
-      if (Array.isArray(element!.tags)) {
-        tags = element!.tags.join(", ");
-      }
-      
       function handleClick() {
         const elementCard = document.getElementById("elementCard");
         const elementCardSymbol = document.getElementById("elementCardSymbol");
@@ -64,20 +57,18 @@ export default function Cell({
         const elementCardPeriod = document.getElementById("elementCardPeriod");
         const elementCardECFull = document.getElementById("elementCardECFull");
         const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
-        const elementCardTags = document.getElementById("elementCardTags");
         const elementCardElectronegativity = document.getElementById("elementCardElectronegativity");
         
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
-        elementCardSymbol!.innerHTML = `${element!.symbol}`;
-        elementCardName!.innerHTML = `${element!.name}`;
-        elementCardFamily!.innerHTML = `${element!.familyText}`;
-        elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`;
-        elementGroup!.innerHTML = `${element!.group}`;
-        elementCardPeriod!.innerHTML = `${element!.period}`;
-        elementCardElectronegativity!.innerHTML = `${element!.electronegativity}`;
-        elementCardECFull!.innerHTML = `${String(element!.fullElectronConfiguration)}`;
-        elementCardECNobleGas!.innerHTML = `${String(element!.nobleGasElectronConfiguration)}`;
-        elementCardTags!.innerHTML = `${tags}`;
+        elementCardSymbol!.innerHTML = `${symbolOf(element!)}`;
+        elementCardName!.innerHTML = `${nameOf(element!)}`;
+        elementCardFamily!.innerHTML = `${getFamilyTextOf(element!)}`;
+        elementCardAtomicNumber!.innerHTML = `${atomicNumberOf(element!)}`;
+        elementGroup!.innerHTML = `${groupOf(element!)}`;
+        elementCardPeriod!.innerHTML = `${periodOf(element!)}`;
+        elementCardElectronegativity!.innerHTML = `${electronegativityOf(element!)}`;
+        elementCardECFull!.innerHTML = `${fullElectronConfigurationOf(element!)}`;
+        elementCardECNobleGas!.innerHTML = `${nobleGasElectronConfigurationOf(element!)}`;
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
@@ -88,10 +79,10 @@ export default function Cell({
 
       return (
         <div onClick={handleClick} className={cellStyle}>
-          <span className="text-lg pl-1.5">{element!.atomicNumber}</span>
-          <div className="text-center text-5xl -mt-1">{element!.symbol}</div>
-          <div className="text-center">{element!.name}</div>
-          <div className="text-center text-sm mt-1">{element!.familyText}</div>
+          <span className="text-lg pl-1.5">{atomicNumberOf(element!)}</span>
+          <div className="text-center text-5xl -mt-1">{symbolOf(element!)}</div>
+          <div className="text-center">{nameOf(element!)}</div>
+          <div className="text-center text-sm mt-1">{getFamilyTextOf(element!)}</div>
         </div>
       ); // return regular cell
     } else if (element == undefined) {

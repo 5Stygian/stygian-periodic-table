@@ -1,21 +1,21 @@
 import Cell from "../cell/cell.tsx";
-
-import { Lithium, Beryllium, Boron, Carbon, Nitrogen, Oxygen, Fluorine, Neon } from "@/app/data/elements.ts";
 import Label from "../cell/label.tsx";
+
+import elements from "@/app/data/newelements.ts";
 
 export default function Period2() {
   return (
     <>
       <Label isPeriod={true} text="2"/>
-      <Cell element={Lithium} />
-      <Cell element={Beryllium} />
+      <Cell element={elements.lithium} />
+      <Cell element={elements.beryllium} />
       <Cell empty={true} amount={10} />
-      <Cell element={Boron} />
-      <Cell element={Carbon} />
-      <Cell element={Nitrogen} />
-      <Cell element={Oxygen} />
-      <Cell element={Fluorine} />
-      <Cell element={Neon} />
+      <Cell element={elements.boron} />
+      <Cell element={elements.carbon} />
+      <Cell element={elements.nitrogen} />
+      <Cell element={elements.oxygen} />
+      <Cell element={elements.fluorine} />
+      <Cell element={elements.neon} />
     </>
   );
 }

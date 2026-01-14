@@ -1,3 +1,8 @@
+/** 
+ * THIS FILE IS DEPRECATED.
+ * USE "newelements.ts" INSTEAD.
+ */
+
 "use client";
 
 import config from "./config";

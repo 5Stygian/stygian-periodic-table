@@ -1,6 +1,7 @@
-type elementType = Record<string, Record<string, string|number>>;
+export type elementType  = Record<string, string|number>;
+export type elementsType = Record<string, elementType>;
 
-const elements: elementType = {
+const elements: elementsType = {
   hydrogen: {
     name: "Hydrogen",
     symbol: "H",
@@ -1298,7 +1299,72 @@ const elements: elementType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p6",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p6"
-  },
+  }
 };
+
+export function nameOf(element: elementType): string {
+  return element.name as string;
+}
+
+export function symbolOf(element: elementType): string {
+  return element.symbol as string;
+}
+
+export function familyOf(element: elementType): string {
+  return element.family as string;
+}
+
+export function atomicNumberOf(element: elementType): number {
+  return element.atomicNumber as number;
+}
+
+export function groupOf(element: elementType): number {
+  return element.group as number;
+}
+
+export function periodOf(element: elementType): number {
+  return element.period as number;
+}
+
+export function electronegativityOf(element: elementType): number {
+  return element.electronegativity as number;
+}
+
+export function fullElectronConfigurationOf(element: elementType): string {
+  return element.fullElectronConfiguration as string;
+}
+
+export function nobleGasElectronConfigurationOf(element: elementType): string {
+  return element.nobleGasElectronConfiguration as string;
+}
+
+export function getFamilyTextOf(element: elementType): string {
+  switch (element.family) {
+    case "alkaliMetal":
+      return "Alkali Metal";
+    case "alkalineEarthMetal":
+      return "Alkaline Earth Metal";
+    case "transitionMetal":
+      return "Transition Metal";
+    case "postTransitionMetal":
+      return "Post-Transition Metal";
+    case "metalloid":
+      return "Metalloid";
+    case "nonmetal":
+      return "Nonmetal";
+    case "halogen":
+      return "Halogen";
+    case "nobleGas":
+      return "Noble Gas";
+    case "lanthanide":
+      return "Lanthanide";
+    case "actinide":
+      return "Actinide";
+    case "unknown":
+      return "Unknown";
+    default:
+      return "ERROR";
+  }
+}
 
 export default elements;

@@ -1,15 +1,15 @@
 import Cell from "../cell/cell.tsx";
-
-import { Hydrogen, Helium } from "@/app/data/elements.ts";
 import Label from "../cell/label.tsx";
+
+import elements from "@/app/data/newelements.ts";
 
 export default function Period1() {
   return (
     <>
       <Label isPeriod={true} text="1" />
-      <Cell element={Hydrogen} />
+      <Cell element={elements.hydrogen} />
       <Cell empty={true} amount={16} />
-      <Cell element={Helium} />
+      <Cell element={elements.helium} />
     </>
   );
 }

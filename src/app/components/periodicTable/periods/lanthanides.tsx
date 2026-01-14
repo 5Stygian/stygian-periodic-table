@@ -1,26 +1,26 @@
 import Cell from "../cell/cell";
 
-import { Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium } from "@/app/data/elements";
+import elements from "@/app/data/newelements";
 
 export default function Lanthanides() {
   return (
     <>
       <Cell empty={true} amount={4} />
-      <Cell element={Lanthanum} />
-      <Cell element={Cerium} />
-      <Cell element={Praseodymium} />
-      <Cell element={Neodymium} />
-      <Cell element={Promethium} />
-      <Cell element={Samarium} />
-      <Cell element={Europium} />
-      <Cell element={Gadolinium} />
-      <Cell element={Terbium} />
-      <Cell element={Dysprosium} />
-      <Cell element={Holmium} />
-      <Cell element={Erbium} />
-      <Cell element={Thulium} />
-      <Cell element={Ytterbium} />
-      <Cell element={Lutetium} />
+      <Cell element={elements.lanthanum} />
+      <Cell element={elements.cerium} />
+      <Cell element={elements.praseodymium} />
+      <Cell element={elements.neodymium} />
+      <Cell element={elements.promethium} />
+      <Cell element={elements.samarium} />
+      <Cell element={elements.europium} />
+      <Cell element={elements.gadolinium} />
+      <Cell element={elements.terbium} />
+      <Cell element={elements.dysprosium} />
+      <Cell element={elements.holmium} />
+      <Cell element={elements.erbium} />
+      <Cell element={elements.thulium} />
+      <Cell element={elements.ytterbium} />
+      <Cell element={elements.lutetium} />
     </>
   );
 }
