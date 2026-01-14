@@ -1,3 +1,5 @@
+import config from "./config";
+
 export type elementType  = Record<string, string|number>;
 export type elementsType = Record<string, elementType>;
 
@@ -1364,6 +1366,33 @@ export function getFamilyTextOf(element: elementType): string {
       return "Unknown";
     default:
       return "ERROR";
+  }
+}
+
+export function getColorOf(element: elementType): string {
+  switch (familyOf(element)) {
+    case "alkaliMetal":
+      return config.family.alkaliMetal;
+    case "alkalineEarthMetal":
+      return config.family.alkalineEarthMetal;
+    case "transitionMetal":
+      return config.family.transitionMetal;
+    case "postTransitionMetal":
+      return config.family.postTransitionMetal;
+    case "metalloid":
+      return config.family.metalloid;
+    case "nonmetal":
+      return config.family.nonmetal;
+    case "halogen":
+      return config.family.halogen;
+    case "nobleGas":
+      return config.family.nobleGas;
+    case "lanthanide":
+      return config.family.lanthanide;
+    case "actinide":
+      return config.family.actinide;
+    default:
+      return config.family.unknown;
   }
 }
 
