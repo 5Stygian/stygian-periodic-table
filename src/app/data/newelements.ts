@@ -1340,6 +1340,10 @@ export function nobleGasElectronConfigurationOf(element: elementType): string {
   return element.nobleGasElectronConfiguration as string;
 }
 
+export function getElement(element: elementType): elementType {
+  return element;
+}
+
 export function getFamilyTextOf(element: elementType): string {
   switch (element.family) {
     case "alkaliMetal":
