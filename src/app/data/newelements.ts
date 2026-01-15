@@ -3,6 +3,9 @@ import config from "./config";
 export type elementType  = Record<string, string|number|number[]>;
 export type elementsType = Record<string, elementType>;
 
+/**
+ * A dictionary of every element in the periodic table and data about each element.
+ */
 const elements: elementsType = {
   hydrogen: {
     name: "Hydrogen",
@@ -1423,50 +1426,110 @@ const elements: elementsType = {
   }
 };
 
+/**
+ * @param element - The element you want the name of.
+ * 
+ * @returns The name of the element that was passed.
+ */
 export function nameOf(element: elementType): string {
   return element.name as string;
 }
 
+/**
+ * @param element - The element you want the symbol of.
+ * 
+ * @returns The symbol of the element that was passed.
+ */
 export function symbolOf(element: elementType): string {
   return element.symbol as string;
 }
 
+/**
+ * @param element - The element you want the family of.
+ * 
+ * @returns The family of the element that was passed.
+ */
 export function familyOf(element: elementType): string {
   return element.family as string;
 }
 
+/**
+ * @param element - The element you want the atomic number of.
+ * 
+ * @returns The atomic number of the element that was passed.
+ */
 export function atomicNumberOf(element: elementType): number {
   return element.atomicNumber as number;
 }
 
+/**
+ * @param element - The element you want the group of.
+ * 
+ * @returns The group of the element that was passed.
+ */
 export function groupOf(element: elementType): number {
   return element.group as number;
 }
 
+/**
+ * @param element - The element you want the period of.
+ * 
+ * @returns The period of the element that was passed.
+ */
 export function periodOf(element: elementType): number {
   return element.period as number;
 }
 
+/**
+ * @param element - The element you want the electronegativity of.
+ * 
+ * @returns The electronegativity of the element that was passed.
+ */
 export function electronegativityOf(element: elementType): number {
   return element.electronegativity as number;
 }
 
+/**
+ * @param element - The element you want the full electron configuration of.
+ * 
+ * @returns The full electron configuration of the element that was passed.
+ */
 export function fullElectronConfigurationOf(element: elementType): string {
   return element.fullElectronConfiguration as string;
 }
 
+/**
+ * @param element - The element you want the noble gas electron configuration of.
+ * 
+ * @returns The noble gas electron configuration of the element that was passed.
+ */
 export function nobleGasElectronConfigurationOf(element: elementType): string {
   return element.nobleGasElectronConfiguration as string;
 }
 
+/**
+ * @param element - The element you want the electrons per shell of.
+ * 
+ * @returns The electrons per shell of the element that was passed.
+ */
 export function electronsPerShellOf(element: elementType): number[] {
   return element.electronsPerShell as number[];
 }
 
+/**
+ * @param element - The element you want all the data of.
+ * 
+ * @returns The data of the element that was passed.
+ */
 export function getElement(element: elementType): elementType {
   return element;
 }
 
+/**
+ * @param element - The element you want the family text of.
+ * 
+ * @returns The more human readable version of the family of the element that was passed.
+ */
 export function getFamilyTextOf(element: elementType): string {
   switch (element.family) {
     case "alkaliMetal":
@@ -1496,6 +1559,11 @@ export function getFamilyTextOf(element: elementType): string {
   }
 }
 
+/**
+ * @param element - The element you want the color of.
+ * 
+ * @returns The color of the element that was passed. Based off of the elements family.
+ */
 export function getColorOf(element: elementType): string {
   switch (familyOf(element)) {
     case "alkaliMetal":
