@@ -92,7 +92,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p4",
     nobleGasElectronConfiguration: "[He] 2s2 2p4"
   },
-  flourine: {
+  fluorine: {
     name: "Fluorine",
     symbol: "F",
     family: "halogen",
@@ -125,7 +125,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s1",
     nobleGasElectronConfiguration: "[Ne] 3s1"
   },
-  nagnesium: {
+  magnesium: {
     name: "Magnesium",
     symbol: "Mg",
     family: "alkalineEarthMetal",
@@ -246,7 +246,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d2 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d2 4s2"
   },
-  vandium: {
+  vanadium: {
     name: "Vanadium",
     symbol: "V",
     family: "transitionMetal",
@@ -1104,7 +1104,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f12 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f12 7s2"
   },
-  mendelvium: {
+  mendelevium: {
     name: "Mendelevium",
     symbol: "Md",
     family: "actinide",
@@ -1203,7 +1203,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d7 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d7 7s2"
   },
-  darmstadium: {
+  darmstadtium: {
     name: "Darmstadtium",
     symbol: "Ds",
     family: "unknown",
@@ -1214,7 +1214,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d8 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d8 7s2"
   },
-  poentgenium: {
+  roentgenium: {
     name: "Roentgenium",
     symbol: "Rg",
     family: "unknown",

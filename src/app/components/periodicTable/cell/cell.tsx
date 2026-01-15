@@ -1,4 +1,4 @@
-// i dont care that this is hard af to read. you're smart, figure it out
+// i don't care that this is hard af to read. you're smart, figure it out
 
 "use client";
 
