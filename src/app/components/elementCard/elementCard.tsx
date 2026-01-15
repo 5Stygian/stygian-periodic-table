@@ -47,6 +47,10 @@ export default function ElementCard() {
               <th className={dataTitleStyling}>Noble Gas</th>
               <td id="elementCardECNobleGas" className={dataContentStyling}>$element.nobleGasElectronConfiguration</td>
             </tr>
+            <tr>
+              <th className={dataTitleStyling}>Electrons Per Shell</th>
+              <td id="elementCardElectronsPerShell" className={dataContentStyling}>$element.electronsPerShell</td>
+            </tr>
           </tbody>
         </table>
       </div>
