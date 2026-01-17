@@ -1435,9 +1435,8 @@ const elements: elementsType = {
  * @param value - The value to look for.
  * 
  * @returns An object of elementType.
- * 
- * @remarks This function currently doesn't work for electronsPerShell
  */
+// TODO: This function currently doesn't work for electronsPerShell
 export function lookup(key: validKeys, value: string|number|number[]): elementType|undefined {
   for (const [element, data] of Object.entries(elements)) {
     if (data[key] == value) {
