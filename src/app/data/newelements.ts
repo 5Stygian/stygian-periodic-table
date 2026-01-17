@@ -1,10 +1,11 @@
 import config from "./config";
 
+export type validKeys = "name" | "symbol" | "family" | "atomicNumber" | "group" | "period" | "electronegativity" | "fullElectronConfiguration" | "nobleGasElectronConfiguration" | "electronsPerShell";
 export type elementType  = Record<string, string|number|number[]>;
 export type elementsType = Record<string, elementType>;
 
 /**
- * A dictionary of every element in the periodic table and data about each element.
+ * A dictionary of every element in the periodic table with data about each element.
  */
 const elements: elementsType = {
   hydrogen: {
@@ -1425,6 +1426,25 @@ const elements: elementsType = {
     electronsPerShell: [ 2, 8, 18, 32, 32, 18, 8 ]
   }
 };
+
+/**
+ * Looks through the elements dictionary for a 
+ * matching key-value pair.
+ * 
+ * @param key - The data contained in the key to compare the value to.
+ * @param value - The value to look for.
+ * 
+ * @returns An object of elementType.
+ * 
+ * @remarks This function currently doesn't work for electronsPerShell
+ */
+export function lookup(key: validKeys, value: string|number|number[]): elementType|undefined {
+  for (const [element, data] of Object.entries(elements)) {
+    if (data[key] == value) {
+      return elements[element];
+    }
+  }
+}
 
 /**
  * @param element - The element you want the name of.

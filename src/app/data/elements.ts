@@ -156,7 +156,7 @@ export class Element {
 
     ELEMENTS[atomicNumber] = this;
 
-    console.log(this.dict);
+    //console.log(this.dict);
   }
 
   public getName(): string { return this.name }
