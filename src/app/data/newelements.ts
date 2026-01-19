@@ -8,6 +8,18 @@ export type elementsType = Record<string, elementType>;
  * A dictionary of every element in the periodic table with data about each element.
  */
 const elements: elementsType = {
+  NaE: {
+    name: "Not a Element",
+    symbol: "NaE",
+    family: "N/A",
+    atomicNumber: NaN,
+    group: NaN,
+    period: NaN,
+    electronegativity: NaN,
+    fullElectronConfiguration: "N/A",
+    nobleGasElectronConfiguration: "N/A",
+    electronsPerShell: [ NaN ]
+  },
   hydrogen: {
     name: "Hydrogen",
     symbol: "H",
@@ -1433,21 +1445,25 @@ const elements: elementsType = {
  * 
  * @param key - The data contained in the key to compare the value to.
  * @param value - The value to look for.
+ * @param log - Whether or not to log the element to the console.
  * 
- * @returns An object of elementType if the value and key both exist and correspond. It returns undefined if the value given doesnt match any key.
+ * @returns An object of elementType if the value and key both exist and correspond. It returns elements.NaE if the value given doesnt match the value held in any key.
  */
-export function lookup(key: validKeys, value: string|number|number[], log: boolean|undefined = false): elementType|undefined {
-for (const [element, data] of Object.entries(elements)) {
+export function lookup(key: validKeys, value: string|number|number[], log: boolean|undefined = false): elementType {
+  let returnElement: elementType = elements.NaE;
+
+  for (const [element, data] of Object.entries(elements)) {
     if (key === "electronsPerShell") {
       if (JSON.stringify(data[key]) === JSON.stringify(value)) {
-        if (log == true) { console.log(elements[element]); }
-        return elements[element];
+        returnElement = elements[element];
       }
-    } else if (data[key] === value) {
-      if (log == true) { console.log(elements[element]); }
-      return elements[element];
+    } else if (data[key] == value) {
+      returnElement = elements[element];
     }
   }
+
+  if (log == true) { console.log(returnElement); }
+  return elements.NaE;
 }
 
 /**
