@@ -4,5 +4,6 @@ import ElementCard from "./elementCard/elementCard";
 import License from "./misc/license";
 import SourceCode from "./misc/sourceCode";
 // <-- ts is ragebaiting me <-- here lies the sidebar import
+import SearchBar from "./searchBar/searchBar";
 
-export { MainPage, PeriodicTable, ElementCard, License, SourceCode };
+export { MainPage, PeriodicTable, ElementCard, License, SourceCode, SearchBar };

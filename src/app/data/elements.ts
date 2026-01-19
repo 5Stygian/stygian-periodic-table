@@ -1,13 +1,13 @@
 /** 
  * THIS FILE IS DEPRECATED.
  * USE "newelements.ts" INSTEAD.
- */
+
 
 "use client";
 
 import config from "./config";
 
-export let ELEMENTS: Element[] = [];
+export const ELEMENTS: Element[] = [];
 
 interface ElementDict {
   name: string;
@@ -315,3 +315,5 @@ export const Moscovium: Element     = new Element({name: "Moscovium",      symbo
 export const Livermorium: Element   = new Element({name: "Livermorium",    symbol: "Lv", family: "unknown",             atomicNumber: 116, group: 16,           period: 7, electronegativity: NaN,  fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p4", nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p4"});
 export const Tennessine: Element    = new Element({name: "Tennessine",     symbol: "Ts", family: "unknown",             atomicNumber: 117, group: 17,           period: 7, electronegativity: NaN,  fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p5", nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p5"});
 export const Oganesson: Element     = new Element({name: "Oganesson",      symbol: "Og", family: "unknown",             atomicNumber: 118, group: 18,           period: 7, electronegativity: NaN,  fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p6", nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p6"});
+
+*/
