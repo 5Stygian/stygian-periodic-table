@@ -1457,12 +1457,12 @@ export function lookup(key: validKeys, value: string|number|number[], log: boole
       if (JSON.stringify(data[key]) === JSON.stringify(value)) {
         returnElement = elements[element];
       }
-    } else if (data[key] == value) {
+    } else if (data[key] === value) {
       returnElement = elements[element];
     }
   }
 
-  if (log == true) { console.log(returnElement); }
+  if (log === true) { console.log(returnElement); }
   return elements.NaE;
 }
 
