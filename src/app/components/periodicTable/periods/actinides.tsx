@@ -1,6 +1,6 @@
 import Cell from "../cell/cell.tsx";
 
-import elements from "@/app/data/newelements.ts";
+import elements from "@/app/data/elements.ts";
 
 export default function Actinides() {
   return (

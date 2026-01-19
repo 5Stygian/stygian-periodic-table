@@ -1,6 +1,6 @@
 import Cell from "../cell/cell";
 
-import elements from "@/app/data/newelements";
+import elements from "@/app/data/elements";
 
 export default function Lanthanides() {
   return (
