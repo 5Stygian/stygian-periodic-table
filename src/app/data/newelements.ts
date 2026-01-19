@@ -1436,10 +1436,15 @@ const elements: elementsType = {
  * 
  * @returns An object of elementType if the value and key both exist and correspond. It returns undefined if the value given doesnt match any key.
  */
-// TODO: This function currently doesn't work for electronsPerShell
-export function lookup(key: validKeys, value: string|number|number[]): elementType|undefined {
-  for (const [element, data] of Object.entries(elements)) {
-    if (data[key] == value) {
+export function lookup(key: validKeys, value: string|number|number[], log: boolean|undefined = false): elementType|undefined {
+for (const [element, data] of Object.entries(elements)) {
+    if (key === "electronsPerShell") {
+      if (JSON.stringify(data[key]) === JSON.stringify(value)) {
+        if (log == true) { console.log(elements[element]); }
+        return elements[element];
+      }
+    } else if (data[key] === value) {
+      if (log == true) { console.log(elements[element]); }
       return elements[element];
     }
   }
