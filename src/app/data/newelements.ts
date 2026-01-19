@@ -1434,7 +1434,7 @@ const elements: elementsType = {
  * @param key - The data contained in the key to compare the value to.
  * @param value - The value to look for.
  * 
- * @returns An object of elementType.
+ * @returns An object of elementType if the value and key both exist and correspond. It returns undefined if the value given doesnt match any key.
  */
 // TODO: This function currently doesn't work for electronsPerShell
 export function lookup(key: validKeys, value: string|number|number[]): elementType|undefined {
