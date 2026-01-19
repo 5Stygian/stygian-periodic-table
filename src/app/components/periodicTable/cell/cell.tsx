@@ -79,8 +79,10 @@ export default function Cell({
                    focus:cursor-default focus:scale-105 focus:z-10
                    active:cursor-default active:scale-105 active:z-10`;
 
+      const elementIDCell = `${nameOf(element!)}-cell`;
+
       return (
-        <div onClick={handleClick} className={cellStyle}>
+        <div onClick={handleClick} className={cellStyle} id={elementIDCell}>
           <span className="text-lg pl-1.5">{atomicNumberOf(element!)}</span>
           <div className="text-center text-5xl -mt-1">{symbolOf(element!)}</div>
           <div className="text-center">{nameOf(element!)}</div>
