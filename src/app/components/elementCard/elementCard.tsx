@@ -37,6 +37,10 @@ export default function ElementCard() {
               <td id="elementCardElectronegativity" className={dataContentStyling}>$element.electronegativity</td>
             </tr>
             <tr>
+              <th className={dataTitleStyling}>Oxidation States</th>
+              <td id="elementCardOxidationStates" className={dataContentStyling}>$element.oxidationStates</td>
+            </tr>
+            <tr>
               <th className={dataContentStyling} colSpan={2}><br />Electron Configuration</th>
             </tr>
             <tr>
