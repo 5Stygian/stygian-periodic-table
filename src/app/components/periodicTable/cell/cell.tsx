@@ -65,6 +65,7 @@ export default function Cell({
         
         let oxidationStatesString: string = "";
 
+        // adds a plus sign to the beginning of a state if it is positive
         for (let i: number = 0; i < oxidationStatesOf(element!).length; i++) {
           if (oxidationStatesOf(element!)[i] > 0) {
             oxidationStatesString += `+${oxidationStatesOf(element!)[i]}, `;
@@ -72,6 +73,9 @@ export default function Cell({
             oxidationStatesString += `${oxidationStatesOf(element!)[i]}, `;
           }
         }
+
+        // removes the trailing comma
+        oxidationStatesString = oxidationStatesString.slice(0, -2);
 
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${getColorOf(element!)}`;
         elementCardSymbol!.innerHTML = `${symbolOf(element!)}`;
