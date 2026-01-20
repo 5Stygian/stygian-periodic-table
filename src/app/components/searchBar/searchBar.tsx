@@ -7,6 +7,7 @@ export default function SearchBar() {
 
   function handleChange( event: { target: { value: SetStateAction<string>; }; } ): void {
     setInput(event.target.value);
+    console.log(input);
   }
 
   return (

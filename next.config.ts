@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isProd ? undefined : `http://${internalHost}:3000`,
   images: {
     unoptimized: true,
-  },
+  }
 };
 
 export default nextConfig;
