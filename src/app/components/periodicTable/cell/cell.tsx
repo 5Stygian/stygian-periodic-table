@@ -2,7 +2,7 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import config from "@/app/data/config";
 import { elementType, nameOf, symbolOf, groupOf, periodOf, atomicNumberOf, electronegativityOf, fullElectronConfigurationOf, nobleGasElectronConfigurationOf, electronsPerShellOf, getFamilyTextOf, getColorOf } from "@/app/data/elements";
@@ -47,6 +47,8 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
+      const [heldElement, setHeldElement] = useState(element!);
+
       function handleClick(): void {
         const elementCard = document.getElementById("elementCard");
         const elementCardSymbol = document.getElementById("elementCardSymbol");
