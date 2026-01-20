@@ -8,6 +8,7 @@ export default function Index() {
         <c.PeriodicTable />
         <c.ElementCard />
       </c.MainPage>
+      <c.Sources />
       <c.SourceCode />
       <c.License />
     </main>

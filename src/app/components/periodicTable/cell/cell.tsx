@@ -36,7 +36,7 @@ export default function Cell({
   label = false
 }: ElementProps) {
   const [heldElement, setHeldElement] = useState(element!);
-  
+
   let cellStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
 
   if (!empty && !element && !nonElement && !label) {
