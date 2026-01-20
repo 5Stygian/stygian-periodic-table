@@ -35,6 +35,8 @@ export default function Cell({
   nonElement = false,
   label = false
 }: ElementProps) {
+  const [heldElement, setHeldElement] = useState(element!);
+  
   let cellStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
 
   if (!empty && !element && !nonElement && !label) {
@@ -47,8 +49,6 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
-      const [heldElement, setHeldElement] = useState(element!);
-
       function handleClick(): void {
         const elementCard = document.getElementById("elementCard");
         const elementCardSymbol = document.getElementById("elementCardSymbol");
