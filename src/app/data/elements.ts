@@ -1447,7 +1447,8 @@ const elements: elementsType = {
  * @param value - The value to look for.
  * @param log - Whether or not to log the element to the console.
  * 
- * @returns An object of elementType if the value and key both exist and correspond. It returns elements.NaE if the value given doesnt match the value held in any key.
+ * @returns An object of elementType if the value and key both exist and correspond.
+ * It returns elements.NaE if the value given doesn't match the value held in any element's key.
  */
 export function lookup(key: validKeys, value: string|number|number[], log: boolean|undefined = false): elementType {
   let returnElement: elementType = elements.NaE;
