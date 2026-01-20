@@ -47,7 +47,7 @@ export default function Cell({
     ); // return
   } else if (!empty) {
     if (!nonElement && !label) {
-      function handleClick() {
+      function handleClick(): void {
         const elementCard = document.getElementById("elementCard");
         const elementCardSymbol = document.getElementById("elementCardSymbol");
         const elementCardName = document.getElementById("elementCardName");
