@@ -1,6 +1,6 @@
 import config from "./config";
 
-export type validKeys = "name" | "symbol" | "family" | "atomicNumber" | "group" | "period" | "electronegativity" | "fullElectronConfiguration" | "nobleGasElectronConfiguration" | "electronsPerShell";
+export type validKeys = "name" | "symbol" | "family" | "atomicNumber" | "group" | "period" | "electronegativity" | "fullElectronConfiguration" | "nobleGasElectronConfiguration" | "electronsPerShell" | "oxidationStates";
 export type elementType  = Record<string, string|number|number[]>;
 export type elementsType = Record<string, elementType>;
 
@@ -18,7 +18,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "N/A",
     nobleGasElectronConfiguration: "N/A",
-    electronsPerShell: [ NaN ]
+    electronsPerShell: [ NaN ],
+    oxidationStates: [ NaN ]
   },
   hydrogen: {
     name: "Hydrogen",
@@ -30,7 +31,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s1",
     nobleGasElectronConfiguration: "N/A",
-    electronsPerShell: [ 1 ]
+    electronsPerShell: [ 1 ],
+    oxidationStates: [ +1, -1 ]
   },
   helium: {
     name: "Helium",
@@ -42,7 +44,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2",
     nobleGasElectronConfiguration: "N/A",
-    electronsPerShell: [ 2 ]
+    electronsPerShell: [ 2 ],
+    oxidationStates: [ 0 ]
   },
   lithium: {
     name: "Lithium",
@@ -54,7 +57,8 @@ const elements: elementsType = {
     electronegativity: 0.98,
     fullElectronConfiguration: "1s2 2s1",
     nobleGasElectronConfiguration: "[He] 2s1",
-    electronsPerShell: [ 2, 1 ]
+    electronsPerShell: [ 2, 1 ],
+    oxidationStates: [ +1 ]
   },
   beryllium: {
     name: "Beryllium",
@@ -66,7 +70,8 @@ const elements: elementsType = {
     electronegativity: 1.57,
     fullElectronConfiguration: "1s2 2s2",
     nobleGasElectronConfiguration: "[He] 2s2",
-    electronsPerShell: [ 2, 2]
+    electronsPerShell: [ 2, 2 ],
+    oxidationStates: [ +2 ]
   },
   boron: {
     name: "Boron",
@@ -78,7 +83,8 @@ const elements: elementsType = {
     electronegativity: 2.04,
     fullElectronConfiguration: "1s2 2s2 2p1",
     nobleGasElectronConfiguration: "[He] 2s2 2p1",
-    electronsPerShell: [ 2, 3 ]
+    electronsPerShell: [ 2, 3 ],
+    oxidationStates: [ +3 ]
   },
   carbon: {
     name: "Carbon",
@@ -90,7 +96,8 @@ const elements: elementsType = {
     electronegativity: 2.55,
     fullElectronConfiguration: "1s2 2s2 2p2",
     nobleGasElectronConfiguration: "[He] 2s2 2p2",
-    electronsPerShell: [ 2, 4 ]
+    electronsPerShell: [ 2, 4 ],
+    oxidationStates: [ +4, +2, -4 ]
   },
   nitrogen: {
     name: "Nitrogen",
@@ -102,7 +109,8 @@ const elements: elementsType = {
     electronegativity: 3.04,
     fullElectronConfiguration: "1s2 2s2 2p3",
     nobleGasElectronConfiguration: "[He] 2s2 2p3",
-    electronsPerShell: [ 2, 5 ]
+    electronsPerShell: [ 2, 5 ],
+    oxidationStates: [ +5, +4, +3, +2, +1, -1, -2, -3 ]
   },
   oxygen: {
     name: "Oxygen",
@@ -114,7 +122,8 @@ const elements: elementsType = {
     electronegativity: 3.44,
     fullElectronConfiguration: "1s2 2s2 2p4",
     nobleGasElectronConfiguration: "[He] 2s2 2p4",
-    electronsPerShell: [ 2, 6 ]
+    electronsPerShell: [ 2, 6 ],
+    oxidationStates: [ -2 ]
   },
   fluorine: {
     name: "Fluorine",
@@ -126,7 +135,8 @@ const elements: elementsType = {
     electronegativity: 3.98,
     fullElectronConfiguration: "1s2 2s2 2p5",
     nobleGasElectronConfiguration: "[He] 2s2 2p5",
-    electronsPerShell: [ 2, 7 ]
+    electronsPerShell: [ 2, 7 ],
+    oxidationStates: [ -1 ]
   },
   neon: {
     name: "Neon",
@@ -138,7 +148,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6",
     nobleGasElectronConfiguration: "[He] 2s2 2p6",
-    electronsPerShell: [ 2, 8 ]
+    electronsPerShell: [ 2, 8 ],
+    oxidationStates: [ 0 ]
   },
   sodium: {
     name: "Sodium",
@@ -150,7 +161,8 @@ const elements: elementsType = {
     electronegativity: 0.93,
     fullElectronConfiguration: "1s2 2s2 2p6 3s1",
     nobleGasElectronConfiguration: "[Ne] 3s1",
-    electronsPerShell: [ 2, 8, 1 ]
+    electronsPerShell: [ 2, 8, 1 ],
+    oxidationStates: [ +1 ]
   },
   magnesium: {
     name: "Magnesium",
@@ -162,7 +174,8 @@ const elements: elementsType = {
     electronegativity: 1.31,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2",
     nobleGasElectronConfiguration: "[Ne] 3s2",
-    electronsPerShell: [ 2, 8, 2 ]
+    electronsPerShell: [ 2, 8, 2 ],
+    oxidationStates: [ +2 ]
   },
   aluminum: {
     name: "Aluminum",
@@ -174,7 +187,8 @@ const elements: elementsType = {
     electronegativity: 1.61,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p1",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p1",
-    electronsPerShell: [ 2, 8, 3 ]
+    electronsPerShell: [ 2, 8, 3 ],
+    oxidationStates: [ +3 ]
   },
   silicon: {
     name: "Silicon",
@@ -186,7 +200,8 @@ const elements: elementsType = {
     electronegativity: 1.9,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p2",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p2",
-    electronsPerShell: [ 2, 8, 4 ]
+    electronsPerShell: [ 2, 8, 4 ],
+    oxidationStates: [ +4, +2, -4 ]
   },
   phosphorus: {
     name: "Phosphorus",
@@ -198,7 +213,8 @@ const elements: elementsType = {
     electronegativity: 2.19,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p3",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p3",
-    electronsPerShell: [ 2, 8, 5 ]
+    electronsPerShell: [ 2, 8, 5 ],
+    oxidationStates: [ +5, +3, -3 ]
   },
   sulfur: {
     name: "Sulfur",
@@ -210,7 +226,8 @@ const elements: elementsType = {
     electronegativity: 2.58,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p4",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p4",
-    electronsPerShell: [ 2, 8, 6 ]
+    electronsPerShell: [ 2, 8, 6 ],
+    oxidationStates: [ +6, +4, -2 ]
   },
   chlorine: {
     name: "Chlorine",
@@ -222,7 +239,8 @@ const elements: elementsType = {
     electronegativity: 3.16,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p5",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p5",
-    electronsPerShell: [ 2, 8, 7 ]
+    electronsPerShell: [ 2, 8, 7 ],
+    oxidationStates: [ +7, +5, +1, -1 ]
   },
   argon: {
     name: "Argon",
@@ -234,7 +252,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6",
     nobleGasElectronConfiguration: "[Ne] 3s2 3p6",
-    electronsPerShell: [ 2, 8, 8 ]
+    electronsPerShell: [ 2, 8, 8 ],
+    oxidationStates: [ 0 ]
   },
   potassium: {
     name: "Potassium",
@@ -246,7 +265,8 @@ const elements: elementsType = {
     electronegativity: 0.82,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 4s1",
     nobleGasElectronConfiguration: "[Ar] 4s1",
-    electronsPerShell: [ 2, 8, 8, 1 ]
+    electronsPerShell: [ 2, 8, 8, 1 ],
+    oxidationStates: [ +1 ]
   },
   calcium: {
     name: "Calcium",
@@ -258,7 +278,8 @@ const elements: elementsType = {
     electronegativity: 1,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 4s2",
     nobleGasElectronConfiguration: "[Ar] 4s2",
-    electronsPerShell: [ 2, 8, 8, 2 ]
+    electronsPerShell: [ 2, 8, 8, 2 ],
+    oxidationStates: [ +2 ]
   },
   scandium: {
     name: "Scandium",
@@ -270,7 +291,8 @@ const elements: elementsType = {
     electronegativity: 1.36,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d1 4s2",
     nobleGasElectronConfiguration: "[Ar] 4s2 3d1",
-    electronsPerShell: [ 2, 8, 9, 2 ]
+    electronsPerShell: [ 2, 8, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   titanium: {
     name: "Titanium",
@@ -282,7 +304,8 @@ const elements: elementsType = {
     electronegativity: 1.54,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d2 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d2 4s2",
-    electronsPerShell: [ 2, 8, 10, 2 ]
+    electronsPerShell: [ 2, 8, 10, 2 ],
+    oxidationStates: [ +4, +3, +2 ]
   },
   vanadium: {
     name: "Vanadium",
@@ -294,7 +317,8 @@ const elements: elementsType = {
     electronegativity: 1.63,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d3 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d3 4s2",
-    electronsPerShell: [ 2, 8, 11, 2 ]
+    electronsPerShell: [ 2, 8, 11, 2 ],
+    oxidationStates: [ +5, +4, +3, +2 ]
   },
   chromium: {
     name: "Chromium",
@@ -306,7 +330,8 @@ const elements: elementsType = {
     electronegativity: 1.66,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d4 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d4 4s2",
-    electronsPerShell: [ 2, 8, 12, 2 ]
+    electronsPerShell: [ 2, 8, 12, 2 ],
+    oxidationStates: [ +6, +3, +2 ]
   },
   manganese: {
     name: "Manganese",
@@ -318,7 +343,8 @@ const elements: elementsType = {
     electronegativity: 1.55,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d5 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d5 4s2",
-    electronsPerShell: [ 2, 8, 13, 2 ]
+    electronsPerShell: [ 2, 8, 13, 2 ],
+    oxidationStates: [ +7, +4, +3, +2 ]
   },
   iron: {
     name: "Iron",
@@ -330,7 +356,8 @@ const elements: elementsType = {
     electronegativity: 1.83,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d6 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d6 4s2",
-    electronsPerShell: [ 2, 8, 14, 2 ]
+    electronsPerShell: [ 2, 8, 14, 2 ],
+    oxidationStates: [ +4, +2 ]
   },
   cobalt: {
     name: "Cobalt",
@@ -342,7 +369,8 @@ const elements: elementsType = {
     electronegativity: 1.88,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d7 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d7 4s2",
-    electronsPerShell: [ 2, 8, 15, 2 ]
+    electronsPerShell: [ 2, 8, 15, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   nickel: {
     name: "Nickel",
@@ -354,7 +382,8 @@ const elements: elementsType = {
     electronegativity: 1.91,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d8 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d8 4s2",
-    electronsPerShell: [ 2, 8, 16, 2 ]
+    electronsPerShell: [ 2, 8, 16, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   copper: {
     name: "Copper",
@@ -366,7 +395,8 @@ const elements: elementsType = {
     electronegativity: 1.9,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d9 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d9 4s2",
-    electronsPerShell: [ 2, 8, 17, 2 ]
+    electronsPerShell: [ 2, 8, 17, 2 ],
+    oxidationStates: [ +2, +1 ]
   },
   zinc: {
     name: "Zinc",
@@ -378,7 +408,8 @@ const elements: elementsType = {
     electronegativity: 1.65,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2",
-    electronsPerShell: [ 2, 8, 18, 2 ]
+    electronsPerShell: [ 2, 8, 18, 2 ],
+    oxidationStates: [ +2 ]
   },
   gallium: {
     name: "Gallium",
@@ -390,7 +421,8 @@ const elements: elementsType = {
     electronegativity: 1.81,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p1",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p1",
-    electronsPerShell: [ 2, 8, 18, 3 ]
+    electronsPerShell: [ 2, 8, 18, 3 ],
+    oxidationStates: [ +3 ]
   },
   germanium: {
     name: "Germanium",
@@ -402,7 +434,8 @@ const elements: elementsType = {
     electronegativity: 2.01,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p2",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p2",
-    electronsPerShell: [ 2, 8, 18, 4 ]
+    electronsPerShell: [ 2, 8, 18, 4 ],
+    oxidationStates: [ +4, +2 ]
   },
   arsenic: {
     name: "Arsenic",
@@ -413,9 +446,9 @@ const elements: elementsType = {
     period: 4,
     electronegativity: 2.18,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p3",
-    nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p3"
-    ,
-    electronsPerShell: [ 2, 8, 18, 5 ]
+    nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p3",
+    electronsPerShell: [ 2, 8, 18, 5 ],
+    oxidationStates: [ +5, +3, -3 ]
   },
   selenium: {
     name: "Selenium",
@@ -427,7 +460,8 @@ const elements: elementsType = {
     electronegativity: 2.55,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p4",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p4",
-    electronsPerShell: [ 2, 8, 18, 6 ]
+    electronsPerShell: [ 2, 8, 18, 6 ],
+    oxidationStates: [ +6, +4, -2 ]
   },
   bromine: {
     name: "Bromine",
@@ -439,7 +473,8 @@ const elements: elementsType = {
     electronegativity: 2.96,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p5",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p5",
-    electronsPerShell: [ 2, 8, 18, 7 ]
+    electronsPerShell: [ 2, 8, 18, 7 ],
+    oxidationStates: [ +5, +1, -1 ]
   },
   krypton: {
     name: "Krypton",
@@ -451,7 +486,8 @@ const elements: elementsType = {
     electronegativity: 3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6",
     nobleGasElectronConfiguration: "[Ar] 3d10 4s2 4p6",
-    electronsPerShell: [ 2, 8, 18, 8 ]
+    electronsPerShell: [ 2, 8, 18, 8 ],
+    oxidationStates: [ 0 ]
   },
   rubidium: {
     name: "Rubidium",
@@ -463,7 +499,8 @@ const elements: elementsType = {
     electronegativity: 0.82,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 5s1",
     nobleGasElectronConfiguration: "[Kr] 5s1",
-    electronsPerShell: [ 2, 8, 18, 8, 1 ]
+    electronsPerShell: [ 2, 8, 18, 8, 1 ],
+    oxidationStates: [ +1 ]
   },
   strontium: {
     name: "Strontium",
@@ -475,7 +512,8 @@ const elements: elementsType = {
     electronegativity: 0.95,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 5s2",
     nobleGasElectronConfiguration: "[Kr] 5s2",
-    electronsPerShell: [ 2, 8, 18, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 8, 2 ],
+    oxidationStates: [ +2 ]
   },
   yttrium: {
     name: "Yttrium",
@@ -487,7 +525,8 @@ const elements: elementsType = {
     electronegativity: 1.22,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d1 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d1 5s2",
-    electronsPerShell: [ 2, 8, 18, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   zirconium: {
     name: "Zirconium",
@@ -499,7 +538,8 @@ const elements: elementsType = {
     electronegativity: 1.33,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d2 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d2 5s2",
-    electronsPerShell: [ 2, 8, 18, 10, 2 ]
+    electronsPerShell: [ 2, 8, 18, 10, 2 ],
+    oxidationStates: [ +4 ]
   },
   niobium: {
     name: "Niobium",
@@ -511,7 +551,8 @@ const elements: elementsType = {
     electronegativity: 1.6,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d3 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d3 5s2",
-    electronsPerShell: [ 2, 8, 18, 11, 2 ]
+    electronsPerShell: [ 2, 8, 18, 11, 2 ],
+    oxidationStates: [ +5, +3 ]
   },
   molybdenum: {
     name: "Molybdenum",
@@ -523,7 +564,8 @@ const elements: elementsType = {
     electronegativity: 2.16,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d4 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d4 5s2",
-    electronsPerShell: [ 2, 8, 18, 12, 2 ]
+    electronsPerShell: [ 2, 8, 18, 12, 2 ],
+    oxidationStates: [ +6 ]
   },
   technetium: {
     name: "Technetium",
@@ -535,7 +577,8 @@ const elements: elementsType = {
     electronegativity: 1.9,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d5 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d5 5s2",
-    electronsPerShell: [ 2, 8, 18, 13, 2 ]
+    electronsPerShell: [ 2, 8, 18, 13, 2 ],
+    oxidationStates: [ +7, +6, +4 ]
   },
   ruthenium: {
     name: "Ruthenium",
@@ -547,7 +590,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d6 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d6 5s2",
-    electronsPerShell: [ 2, 8, 18, 14, 2 ]
+    electronsPerShell: [ 2, 8, 18, 14, 2 ],
+    oxidationStates: [ +3 ]
   },
   rhodium: {
     name: "Rhodium",
@@ -559,7 +603,8 @@ const elements: elementsType = {
     electronegativity: 2.28,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d7 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d7 5s2",
-    electronsPerShell: [ 2, 8, 18, 15, 2 ]
+    electronsPerShell: [ 2, 8, 18, 15, 2 ],
+    oxidationStates: [ +3 ]
   },
   palladium: {
     name: "Palladium",
@@ -571,7 +616,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d8 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d8 5s2",
-    electronsPerShell: [ 2, 8, 18, 16, 2 ]
+    electronsPerShell: [ 2, 8, 18, 16, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   silver: {
     name: "Silver",
@@ -583,7 +629,8 @@ const elements: elementsType = {
     electronegativity: 1.93,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d9 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d9 5s2",
-    electronsPerShell: [ 2, 8, 18, 17, 2 ]
+    electronsPerShell: [ 2, 8, 18, 17, 2 ],
+    oxidationStates: [ +1 ]
   },
   cadmium: {
     name: "Cadmium",
@@ -595,7 +642,8 @@ const elements: elementsType = {
     electronegativity: 1.69,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2",
-    electronsPerShell: [ 2, 8, 18, 18, 2 ]
+    electronsPerShell: [ 2, 8, 18, 18, 2 ],
+    oxidationStates: [ +2 ]
   },
   indium: {
     name: "Indium",
@@ -607,7 +655,8 @@ const elements: elementsType = {
     electronegativity: 1.78,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p1",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p1",
-    electronsPerShell: [ 2, 8, 18, 18, 3 ]
+    electronsPerShell: [ 2, 8, 18, 18, 3 ],
+    oxidationStates: [ +3 ]
   },
   tin: {
     name: "Tin",
@@ -619,7 +668,8 @@ const elements: elementsType = {
     electronegativity: 1.96,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p2",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p2",
-    electronsPerShell: [ 2, 8, 18, 18, 4 ]
+    electronsPerShell: [ 2, 8, 18, 18, 4 ],
+    oxidationStates: [ +4, +2 ]
   },
   antimony: {
     name: "Antimony",
@@ -631,7 +681,8 @@ const elements: elementsType = {
     electronegativity: 2.05,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p3",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p3",
-    electronsPerShell: [ 2, 8, 18, 18, 5 ]
+    electronsPerShell: [ 2, 8, 18, 18, 5 ],
+    oxidationStates: [ +5, +3, -3 ]
   },
   tellurium: {
     name: "Tellurium",
@@ -643,7 +694,8 @@ const elements: elementsType = {
     electronegativity: 2.1,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p4",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p4",
-    electronsPerShell: [ 2, 8, 18, 18, 6 ]
+    electronsPerShell: [ 2, 8, 18, 18, 6 ],
+    oxidationStates: [ +6, +4, -2 ]
   },
   iodine: {
     name: "Iodine",
@@ -655,7 +707,8 @@ const elements: elementsType = {
     electronegativity: 2.66,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p5",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p5",
-    electronsPerShell: [ 2, 8, 18, 18, 7 ]
+    electronsPerShell: [ 2, 8, 18, 18, 7 ],
+    oxidationStates: [ +7, +5, +1, -1 ]
   },
   xenon: {
     name: "Xenon",
@@ -667,7 +720,8 @@ const elements: elementsType = {
     electronegativity: 2.6,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6",
     nobleGasElectronConfiguration: "[Kr] 4d10 5s2 5p6",
-    electronsPerShell: [ 2, 8, 18, 18, 8 ]
+    electronsPerShell: [ 2, 8, 18, 18, 8 ],
+    oxidationStates: [ 0 ]
   },
   cesium: {
     name: "Cesium",
@@ -679,7 +733,8 @@ const elements: elementsType = {
     electronegativity: 0.79,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 6s1",
     nobleGasElectronConfiguration: "[Xe] 6s1",
-    electronsPerShell: [ 2, 8, 18, 18, 8, 1 ]
+    electronsPerShell: [ 2, 8, 18, 18, 8, 1 ],
+    oxidationStates: [ +1 ]
   },
   barium: {
     name: "Barium",
@@ -691,7 +746,8 @@ const elements: elementsType = {
     electronegativity: 0.89,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 6s2",
-    electronsPerShell: [ 2, 8, 18, 18, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 18, 8, 2 ],
+    oxidationStates: [ +2 ]
   },
   lanthanum: {
     name: "Lanthanum",
@@ -703,7 +759,8 @@ const elements: elementsType = {
     electronegativity: 1.1,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 5d1 6s2",
     nobleGasElectronConfiguration: "[Xe] 5d1 6s2",
-    electronsPerShell: [ 2, 8, 18, 18, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 18, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   cerium: {
     name: "Cerium",
@@ -715,7 +772,8 @@ const elements: elementsType = {
     electronegativity: 1.12,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f1 5s2 5p6 5d1 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f1 5d1 6s2",
-    electronsPerShell: [ 2, 8, 18, 19, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 19, 9, 2 ],
+    oxidationStates: [ +4, +3 ]
   },
   praseodymium: {
     name: "Praseodymium",
@@ -727,7 +785,8 @@ const elements: elementsType = {
     electronegativity: 1.13,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f3 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f3 6s2",
-    electronsPerShell: [ 2, 8, 18, 21, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 21, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   neodymium: {
     name: "Neodymium",
@@ -739,7 +798,8 @@ const elements: elementsType = {
     electronegativity: 1.14,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f4 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f4 6s2",
-    electronsPerShell: [ 2, 8, 18, 22, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 22, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   promethium: {
     name: "Promethium",
@@ -751,7 +811,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f5 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f5 6s2",
-    electronsPerShell: [ 2, 8, 18, 23, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 23, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   samarium: {
     name: "Samarium",
@@ -763,7 +824,8 @@ const elements: elementsType = {
     electronegativity: 1.17,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f6 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f6 6s2",
-    electronsPerShell: [ 2, 8, 18, 24, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 24, 8, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   europium: {
     name: "Europium",
@@ -775,7 +837,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f7 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f7 6s2",
-    electronsPerShell: [ 2, 8, 18, 25, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 25, 8, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   gadolinium: {
     name: "Gadolinium",
@@ -787,7 +850,8 @@ const elements: elementsType = {
     electronegativity: 1.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f8 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f8 6s2",
-    electronsPerShell: [ 2, 8, 18, 26, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 26, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   terbium: {
     name: "Terbium",
@@ -799,7 +863,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f9 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f9 6s2",
-    electronsPerShell: [ 2, 8, 18, 27, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 27, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   dysprosium: {
     name: "Dysprosium",
@@ -811,7 +876,8 @@ const elements: elementsType = {
     electronegativity: 1.22,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f10 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f10 6s2",
-    electronsPerShell: [ 2, 8, 18, 28, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 28, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   holmium: {
     name: "Holmium",
@@ -823,7 +889,8 @@ const elements: elementsType = {
     electronegativity: 1.23,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f11 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f11 6s2",
-    electronsPerShell: [ 2, 8, 18, 29, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 29, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   erbium: {
     name: "Erbium",
@@ -835,7 +902,8 @@ const elements: elementsType = {
     electronegativity: 1.24,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f12 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f12 6s2",
-    electronsPerShell: [ 2, 8, 18, 30, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 30, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   thulium: {
     name: "Thulium",
@@ -847,7 +915,8 @@ const elements: elementsType = {
     electronegativity: 1.25,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f13 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f13 6s2",
-    electronsPerShell: [ 2, 8, 18, 31, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 31, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   ytterbium: {
     name: "Ytterbium",
@@ -859,7 +928,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 8, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   lutetium: {
     name: "Lutetium",
@@ -871,7 +941,8 @@ const elements: elementsType = {
     electronegativity: 1.27,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d1 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d1 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   hafnium: {
     name: "Hafnium",
@@ -883,7 +954,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d2 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d2 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 10, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 10, 2 ],
+    oxidationStates: [ +4 ]
   },
   tantalum: {
     name: "Tantalum",
@@ -895,7 +967,8 @@ const elements: elementsType = {
     electronegativity: 1.5,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d3 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d3 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 11, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 11, 2 ],
+    oxidationStates: [ +5 ]
   },
   tungsten: {
     name: "Tungsten",
@@ -907,7 +980,8 @@ const elements: elementsType = {
     electronegativity: 2.36,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d4 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d4 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 12, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 12, 2 ],
+    oxidationStates: [ +6 ]
   },
   rhenium: {
     name: "Rhenium",
@@ -919,7 +993,8 @@ const elements: elementsType = {
     electronegativity: 1.9,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d5 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d5 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 13, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 13, 2 ],
+    oxidationStates: [ +7, +6, +4 ]
   },
   osmium: {
     name: "Osmium",
@@ -931,7 +1006,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d6 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d6 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 14, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 14, 2 ],
+    oxidationStates: [ +4, +3 ]
   },
   iridium: {
     name: "Iridium",
@@ -943,7 +1019,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d7 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d7 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 15, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 15, 2 ],
+    oxidationStates: [ +4, +3 ]
   },
   platinum: {
     name: "Platinum",
@@ -955,7 +1032,8 @@ const elements: elementsType = {
     electronegativity: 2.28,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d8 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d8 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 16, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 16, 2 ],
+    oxidationStates: [ +4, +2 ]
   },
   gold: {
     name: "Gold",
@@ -967,7 +1045,8 @@ const elements: elementsType = {
     electronegativity: 2.54,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d9 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d9 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 17, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 17, 2 ],
+    oxidationStates: [ +3, +1 ]
   },
   mercury: {
     name: "Mercury",
@@ -979,7 +1058,8 @@ const elements: elementsType = {
     electronegativity: 2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 2 ],
+    oxidationStates: [ +2, +1 ]
   },
   thallium: {
     name: "Thallium",
@@ -991,7 +1071,8 @@ const elements: elementsType = {
     electronegativity: 1.62,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p1",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p1",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 3 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 3 ],
+    oxidationStates: [ +3, +1 ]
   },
   lead: {
     name: "Lead",
@@ -1003,7 +1084,8 @@ const elements: elementsType = {
     electronegativity: 2.33,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p2",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p2",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 4 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 4 ],
+    oxidationStates: [ +4, +2 ]
   },
   bismuth: {
     name: "Bismuth",
@@ -1015,7 +1097,8 @@ const elements: elementsType = {
     electronegativity: 2.02,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p3",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p3",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 5 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 5 ],
+    oxidationStates: [ +5, +3 ]
   },
   polonium: {
     name: "Polonium",
@@ -1027,7 +1110,8 @@ const elements: elementsType = {
     electronegativity: 2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p4",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p4",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 6 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 6 ],
+    oxidationStates: [ +4, +2 ]
   },
   astatine: {
     name: "Astatine",
@@ -1039,7 +1123,8 @@ const elements: elementsType = {
     electronegativity: 2.2,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p5",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p5",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 7 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 7 ],
+    oxidationStates: [ +7, +5, +3, +1, -1 ]
   },
   radon: {
     name: "Radon",
@@ -1051,7 +1136,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6",
     nobleGasElectronConfiguration: "[Xe] 4f14 5d10 6s2 6p6",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 8 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 8 ],
+    oxidationStates: [ 0 ]
   },
   francium: {
     name: "Francium",
@@ -1063,7 +1149,8 @@ const elements: elementsType = {
     electronegativity: 0.7,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 7s1",
     nobleGasElectronConfiguration: "[Rn] 7s1",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 8, 1 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 8, 1 ],
+    oxidationStates: [ +1 ]
   },
   radium: {
     name: "Radium",
@@ -1075,7 +1162,8 @@ const elements: elementsType = {
     electronegativity: 0.9,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 8, 2 ],
+    oxidationStates: [ +2 ]
   },
   actinium: {
     name: "Actinium",
@@ -1087,7 +1175,8 @@ const elements: elementsType = {
     electronegativity: 1.1,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 6d1 7s2",
     nobleGasElectronConfiguration: "[Rn] 6d1 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   thorium: {
     name: "Thorium",
@@ -1099,7 +1188,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p6 6d2 7s2",
     nobleGasElectronConfiguration: "[Rn] 6d2 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 18, 10, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 18, 10, 2 ],
+    oxidationStates: [ +4 ]
   },
   protactinium: {
     name: "Protactinium",
@@ -1111,7 +1201,8 @@ const elements: elementsType = {
     electronegativity: 1.5,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f2 6s2 6p6 6d1 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f2 6d1 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 20, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 20, 9, 2 ],
+    oxidationStates: [ +5, +4 ]
   },
   uranium: {
     name: "Uranium",
@@ -1123,7 +1214,8 @@ const elements: elementsType = {
     electronegativity: 1.38,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f3 6s2 6p6 6d1 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f3 6d1 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 21, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 21, 9, 2 ],
+    oxidationStates: [ +6, +5, +4, +3 ]
   },
   neptunium: {
     name: "Neptunium",
@@ -1135,7 +1227,8 @@ const elements: elementsType = {
     electronegativity: 1.36,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f4 6s2 6p6 6d1 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f4 6d1 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 22, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 22, 9, 2 ],
+    oxidationStates: [ +6, +5, +4, +3 ]
   },
   plutonium: {
     name: "Plutonium",
@@ -1147,7 +1240,8 @@ const elements: elementsType = {
     electronegativity: 1.28,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 24, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 24, 8, 2 ],
+    oxidationStates: [ +6, +5, +4, +3 ]
   },
   americium: {
     name: "Americium",
@@ -1159,7 +1253,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f7 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f7 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 25, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 25, 8, 2 ],
+    oxidationStates: [ +6, +5, +4, +3 ]
   },
   curium: {
     name: "Curium",
@@ -1171,7 +1266,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f8 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f8 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 26, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 26, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   berkelium: {
     name: "Berkelium",
@@ -1183,7 +1279,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f9 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f9 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 27, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 27, 8, 2 ],
+    oxidationStates: [ +4, +3 ]
   },
   californium: {
     name: "Californium",
@@ -1195,7 +1292,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f10 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f10 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 28, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 28, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   einsteinium: {
     name: "Einsteinium",
@@ -1207,7 +1305,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f11 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f11 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 29, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 29, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   fermium: {
     name: "Fermium",
@@ -1219,7 +1318,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f12 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f12 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 30, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 30, 8, 2 ],
+    oxidationStates: [ +3 ]
   },
   mendelevium: {
     name: "Mendelevium",
@@ -1231,7 +1331,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f13 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f13 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 31, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 31, 8, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   nobelium: {
     name: "Nobelium",
@@ -1243,7 +1344,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f14 6s2 6p6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f14 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 8, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 8, 2 ],
+    oxidationStates: [ +3, +2 ]
   },
   lawrencium: {
     name: "Lawrencium",
@@ -1255,7 +1357,8 @@ const elements: elementsType = {
     electronegativity: 1.3,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 7s2 7p1",
     nobleGasElectronConfiguration: "[Rn] 5f6 7s2 7p1",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 9, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 9, 2 ],
+    oxidationStates: [ +3 ]
   },
   rutherfordium: {
     name: "Rutherfordium",
@@ -1267,7 +1370,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d2 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d2 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 10, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 10, 2 ],
+    oxidationStates: [ +4 ]
   },
   dubnium: {
     name: "Dubnium",
@@ -1279,7 +1383,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d3 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d3 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 11, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 11, 2 ],
+    oxidationStates: [ +5, +4, +3 ]
   },
   seaborgium: {
     name: "Seaborgium",
@@ -1291,7 +1396,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d4 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d4 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 12, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 12, 2 ],
+    oxidationStates: [ +6, +5, +4, +3, 0 ]
   },
   bohrium: {
     name: "Bohrium",
@@ -1303,7 +1409,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d5 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d5 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 13, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 13, 2 ],
+    oxidationStates: [ +7, +5, +4, +3 ]
   },
   hassium: {
     name: "Hassium",
@@ -1315,7 +1422,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d6 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d6 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 14, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 14, 2 ],
+    oxidationStates: [ +8, +6, +5, +4, +3, +2 ]
   },
   meitnerium: {
     name: "Meitnerium",
@@ -1327,7 +1435,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d7 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d7 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 15, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 15, 2 ],
+    oxidationStates: [ +9, +8, +6, +4, +3, +1 ]
   },
   darmstadtium: {
     name: "Darmstadtium",
@@ -1339,7 +1448,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d8 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d8 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 16, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 16, 2 ],
+    oxidationStates: [ +8, +6, +4, +2, 0 ]
   },
   roentgenium: {
     name: "Roentgenium",
@@ -1351,7 +1461,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d9 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d9 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 17, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 17, 2 ],
+    oxidationStates: [ +5, +3, +1, -1 ]
   },
   copernicium: {
     name: "Copernicium",
@@ -1363,7 +1474,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 2 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 2 ],
+    oxidationStates: [ +2, +1, 0 ]
   },
   nihonium: {
     name: "Nihonium",
@@ -1375,7 +1487,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p1",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p1",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 3 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 3 ],
+    oxidationStates: [ NaN ]
   },
   flerovium: {
     name: "Flerovium",
@@ -1387,7 +1500,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p2",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p2",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 4 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 4 ],
+    oxidationStates: [ +6, +4, +2, +1, 0 ]
   },
   moscovium: {
     name: "Moscovium",
@@ -1399,7 +1513,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p3",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p3",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 5 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 5 ],
+    oxidationStates: [ +3, +1 ]
   },
   livermorium: {
     name: "Livermorium",
@@ -1411,7 +1526,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p4",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p4",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 6 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 6 ],
+    oxidationStates: [ +4, +2, -2 ]
   },
   tennessine: {
     name: "Tennessine",
@@ -1423,7 +1539,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p5",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p5",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 7 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 7 ],
+    oxidationStates: [ +5, +3, +1, -1 ]
   },
   oganesson: {
     name: "Oganesson",
@@ -1435,7 +1552,8 @@ const elements: elementsType = {
     electronegativity: NaN,
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 5f6 6s2 6p6 6d10 7s2 7p6",
     nobleGasElectronConfiguration: "[Rn] 5f6 6d10 7s2 7p6",
-    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 8 ]
+    electronsPerShell: [ 2, 8, 18, 32, 32, 18, 8 ],
+    oxidationStates: [ +6, +4, +2, +1, 0, -1 ]
   }
 };
 
@@ -1552,6 +1670,15 @@ export function nobleGasElectronConfigurationOf(element: elementType): string {
  */
 export function electronsPerShellOf(element: elementType): number[] {
   return element.electronsPerShell as number[];
+}
+
+/**
+ * @param element - The element you want the oxidation states of.
+ * 
+ * @returns The oxidation states of the element that was passed.
+ */
+export function oxidationStatesOf(element: elementType): number[] {
+  return element.oxidationStates as number[];
 }
 
 /**
