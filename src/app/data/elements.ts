@@ -9,7 +9,7 @@ export type elementsType = Record<string, elementType>;
  */
 const elements: elementsType = {
   NaE: {
-    name: "Not a Element",
+    name: "Not an Element",
     symbol: "NaE",
     family: "N/A",
     atomicNumber: NaN,
@@ -1450,15 +1450,12 @@ const elements: elementsType = {
  * @returns An object of elementType if the value and key both exist and correspond.
  * It returns elements.NaE if the value given doesn't match the value held in any element's key.
  */
+// TODO: figure out how this function should work if key is either group or period.
 export function lookup(key: validKeys, value: string|number|number[], log: boolean = false): elementType {
   let returnElement: elementType = elements.NaE;
 
   for (const [element, data] of Object.entries(elements)) {
-    if (key === "electronsPerShell") {
-      if (JSON.stringify(data[key]) === JSON.stringify(value)) {
-        returnElement = elements[element];
-      }
-    } else if (data[key] === value) {
+    if (JSON.stringify(data[key]) === JSON.stringify(value)) {
       returnElement = elements[element];
     }
   }
