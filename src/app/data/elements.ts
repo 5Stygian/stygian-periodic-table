@@ -1450,7 +1450,7 @@ const elements: elementsType = {
  * @returns An object of elementType if the value and key both exist and correspond.
  * It returns elements.NaE if the value given doesn't match the value held in any element's key.
  */
-export function lookup(key: validKeys, value: string|number|number[], log: boolean|undefined = false): elementType {
+export function lookup(key: validKeys, value: string|number|number[], log: boolean = false): elementType {
   let returnElement: elementType = elements.NaE;
 
   for (const [element, data] of Object.entries(elements)) {
