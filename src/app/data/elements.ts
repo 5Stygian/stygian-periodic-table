@@ -1,7 +1,8 @@
 import config from "./config";
 
 export type validKeys = "name" | "symbol" | "family" | "atomicNumber" | "group" | "period" | "electronegativity" | "fullElectronConfiguration" | "nobleGasElectronConfiguration" | "electronsPerShell" | "oxidationStates";
-export type elementType  = Record<string, string|number|number[]>;
+export type validTypes = string|number|number[];
+export type elementType  = Record<string, validTypes>;
 export type elementsType = Record<string, elementType>;
 
 /**
@@ -1569,17 +1570,26 @@ const elements: elementsType = {
  * It returns elements.NaE if the value given doesn't match the value held in any element's key.
  */
 // TODO: figure out how this function should work if key is either group or period.
-export function lookup(key: validKeys, value: string|number|number[], log: boolean = false): elementType {
+export function lookup(key: validKeys, value: validTypes, log: boolean = false): elementType {
   let returnElement: elementType = elements.NaE;
+  let finalData;
 
   for (const [element, data] of Object.entries(elements)) {
-    if (JSON.stringify(data[key]) === JSON.stringify(value)) {
+    const compareData = JSON.stringify(data[key]).trim().toLowerCase();
+
+    if (compareData === JSON.stringify(value).trim().toLowerCase()) {
+      finalData = compareData;
       returnElement = elements[element];
+      break;
     }
   }
 
-  if (log === true) { console.log(returnElement); }
-  return elements.NaE;
+  if (log === true) {
+    console.log(finalData);
+    console.log(returnElement);
+  }
+
+  return returnElement;
 }
 
 /**
