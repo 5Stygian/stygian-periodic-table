@@ -26,7 +26,7 @@ export default function SearchBar() {
   ];
 
   return (
-    <div id="search">
+    <div id="search" className="hidden">
       <form className="w-120 h-12 ml-8 my-8 border-red-500 border-2 rounded-xl inline-flex items-center">
         <input className="pl-4 w-120 h-10" placeholder="Search by property..." value={input} onChange={handleChange} />
       </form>
