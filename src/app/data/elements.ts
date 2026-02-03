@@ -358,7 +358,7 @@ const elements: elementsType = {
     fullElectronConfiguration: "1s2 2s2 2p6 3s2 3p6 3d6 4s2",
     nobleGasElectronConfiguration: "[Ar] 3d6 4s2",
     electronsPerShell: [ 2, 8, 14, 2 ],
-    oxidationStates: [ +4, +2 ]
+    oxidationStates: [ +3, +2 ]
   },
   cobalt: {
     name: "Cobalt",
