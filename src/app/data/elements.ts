@@ -1103,7 +1103,7 @@ const elements: elementsType = {
   },
   polonium: {
     name: "Polonium",
-    symbol: "Sb",
+    symbol: "Po",
     family: "postTransitionMetal",
     atomicNumber: 84,
     group: 16,
